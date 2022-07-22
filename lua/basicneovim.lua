@@ -82,4 +82,10 @@ endif
 au TermEnter * setlocal scrolloff=0
 au TermLeave * setlocal scrolloff=3
 
+
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+
 ]])
