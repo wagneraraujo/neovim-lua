@@ -1,11 +1,9 @@
 
-require("tools")
 require("basicneovim")
 require("plugins.plugins")
+require("tools")
 require("themes")
 require("keymaps")
-require("utils")
+require("plugins.utils")
 require("setthings")
-require("complete")
-
-
+require("plugins.complete")
