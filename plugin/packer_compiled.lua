@@ -69,6 +69,21 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["onedark.nvim"] = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/onedark.nvim",
@@ -83,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["staline.nvim"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/staline.nvim",
+    url = "https://github.com/tamton-aquib/staline.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
