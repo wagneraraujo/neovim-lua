@@ -17,6 +17,8 @@ nnoremap <silent> <C-\> :NvimTreeToggle<CR>
 nnoremap <C-Right> :BufferLineCycleNext<CR>
 nnoremap <C-Left> :BufferLineCyclePrev<CR>
 
+nnoremap <C-f> :Neoformat<CR>
+
 let b:ale_fixers = ['prettier', 'eslint']
 
 

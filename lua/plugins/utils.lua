@@ -2,7 +2,7 @@
 require'nvim-web-devicons'.get_icons()
 require'colorizer'.setup()
 require("bufferline").setup{}
-
+require('Comment').setup()
 require('nvim-autopairs').setup({
   enable_check_bracket_line = false
 })
@@ -10,14 +10,10 @@ require('nvim-autopairs').setup({
 
 --identacao
 vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
-vim.opt.listchars:append("eol:↴")
 
 require("indent_blankline").setup {
     show_end_of_line = true,
-    space_char_blankline = " ",
 }
-
 
 
 -- OR setup with some options
@@ -106,5 +102,11 @@ require'nvim-treesitter.configs'.setup {
         comment = '// %s'
       }
     }
+  },
+	require'nvim-treesitter.configs'.setup {
+  autotag = {
+    enable = true,
   }
+}
+
 }

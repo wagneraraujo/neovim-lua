@@ -20,4 +20,14 @@ highlight matchTag gui=reverse
 
 set re=0
 
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+let g:user_emmet_mode='n'
+let g:user_emmet_mode='inv'
+let g:user_emmet_mode='a'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<leader>'
 ]])
