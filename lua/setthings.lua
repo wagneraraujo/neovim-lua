@@ -30,4 +30,12 @@ let g:user_emmet_mode='a'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_leader_key='<leader>'
+
+
+highlight Cursor guifg=white guibg=orange
+highlight iCursor guifg=white guibg=white
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
 ]])

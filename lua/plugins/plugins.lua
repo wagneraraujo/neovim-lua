@@ -61,7 +61,7 @@ use 'sbdchd/neoformat'
 use 'alvan/vim-closetag'
 use 'leafOfTree/vim-matchtag'
 use 'JoosepAlviste/nvim-ts-context-commentstring'
-use 'kristijanhusak/vim-js-file-import'
+use {'kristijanhusak/vim-js-file-import', run ='npm install'}
 
 use{ 'anuvyklack/pretty-fold.nvim',
    config = function()
@@ -79,6 +79,7 @@ use {
     end
 }
 
+use 'ludovicchabant/vim-gutentags'
 
 end)
 

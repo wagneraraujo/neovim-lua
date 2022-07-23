@@ -261,6 +261,11 @@ _G.packer_plugins = {
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-gutentags"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/vim-gutentags",
+    url = "https://github.com/ludovicchabant/vim-gutentags"
+  },
   ["vim-js-file-import"] = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/vim-js-file-import",
