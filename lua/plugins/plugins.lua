@@ -104,7 +104,9 @@ use {
 use 'lewis6991/impatient.nvim'
 use 'RRethy/vim-illuminate'
 
-
+--themes
+use "EdenEast/nightfox.nvim" -- Packer
+use 'folke/tokyonight.nvim'
 end)
 
 

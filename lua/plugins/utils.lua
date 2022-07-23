@@ -119,3 +119,26 @@ require'nvim-treesitter.configs'.setup {
       require 'illuminate'.on_attach(client)
     end,
   }
+
+
+	--themes config 
+	require('nightfox').setup({
+  options = {
+    styles = {
+      comments = "italic",
+      keywords = "bold",
+      types = "italic,bold",
+    }
+  }
+})
+-- vim.cmd("colorscheme nightfox")
+
+require('lualine').setup {
+  options = {
+    -- ... your lualine config
+    theme = 'tokyonight'
+    -- ... your lualine config
+  }
+}
+vim.cmd[[colorscheme tokyonight]]
+
