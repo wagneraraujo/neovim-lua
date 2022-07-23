@@ -1,27 +1,30 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-['<S-Tab>'] 	lua/plugins/lsp.lua	/^    ['<S-Tab>'] = function(fallback)$/;"	f
-['<S-Tab>'] 	lua/plugins/tabnine.lua	/^    ['<S-Tab>'] = function(fallback)$/;"	f
-['<Tab>'] 	lua/plugins/lsp.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
-['<Tab>'] 	lua/plugins/tabnine.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
-config 	lua/plugins/plugins.lua	/^    config = function()$/;"	f
-config 	lua/plugins/plugins.lua	/^   config = function()$/;"	f
-config 	lua/plugins/plugins.lua	/^  config = function()$/;"	f
-expand 	lua/plugins/lsp.lua	/^    expand = function(args)$/;"	f
-expand 	lua/plugins/tabnine.lua	/^    expand = function(args)$/;"	f
-format 	lua/plugins/lsp.lua	/^    format = function(entry, vim_item)$/;"	f
-format 	lua/plugins/tabnine.lua	/^    format = function(entry, vim_item)$/;"	f
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/dev/.config/nvim/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/9873a6b5/
+['<S-Tab>']	lua/plugins/lsp.lua	/^    ['<S-Tab>'] = function(fallback)$/;"	f
+['<S-Tab>']	lua/plugins/tabnine.lua	/^    ['<S-Tab>'] = function(fallback)$/;"	f
+['<Tab>']	lua/plugins/lsp.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
+['<Tab>']	lua/plugins/tabnine.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
+config	lua/plugins/plugins.lua	/^    config = function()$/;"	f
+config	lua/plugins/plugins.lua	/^   config = function()$/;"	f
+config	lua/plugins/plugins.lua	/^  config = function()$/;"	f
+error_msg	plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
+expand	lua/plugins/lsp.lua	/^    expand = function(args)$/;"	f
+expand	lua/plugins/tabnine.lua	/^    expand = function(args)$/;"	f
+format	lua/plugins/lsp.lua	/^    format = function(entry, vim_item)$/;"	f
+format	lua/plugins/tabnine.lua	/^    format = function(entry, vim_item)$/;"	f
 get_extension	lua/tools.lua	/^function get_extension( var ) -- recebe o argumento para a variável$/;"	f
-if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~	plugin/packer_compiled.lua	/^if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then$/;"	f
-local has_any_words_before 	lua/plugins/lsp.lua	/^local has_any_words_before = function()$/;"	f
-local has_any_words_before 	lua/plugins/tabnine.lua	/^local has_any_words_before = function()$/;"	f
-local no_errors, error_msg 	plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
-on_attach 	lua/plugins/utils.lua	/^    on_attach = function(client)$/;"	f
+has_any_words_before	lua/plugins/lsp.lua	/^local has_any_words_before = function()$/;"	f
+has_any_words_before	lua/plugins/tabnine.lua	/^local has_any_words_before = function()$/;"	f
 save_profiles	plugin/packer_compiled.lua	/^local function save_profiles(threshold)$/;"	f
-time 	plugin/packer_compiled.lua	/^    time = function(chunk, start) end$/;"	f
-time 	plugin/packer_compiled.lua	/^    time = function(chunk, start)$/;"	f
+time	plugin/packer_compiled.lua	/^    time = function(chunk, start) end$/;"	f
+time	plugin/packer_compiled.lua	/^    time = function(chunk, start)$/;"	f
 try_loadstring	plugin/packer_compiled.lua	/^local function try_loadstring(s, component, name)$/;"	f

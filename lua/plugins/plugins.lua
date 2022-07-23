@@ -102,11 +102,19 @@ use {
 }
 
 use 'lewis6991/impatient.nvim'
-use 'RRethy/vim-illuminate'
 
 --themes
 use "EdenEast/nightfox.nvim" -- Packer
 use 'folke/tokyonight.nvim'
+use 'maxmellon/vim-jsx-pretty'
+
+-- use {
+--   'rmagatti/goto-preview',
+--   config = function()
+--     require('goto-preview').setup {}
+--   end
+-- }
+
 end)
 
 
