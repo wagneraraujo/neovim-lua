@@ -13,9 +13,13 @@
 ['<S-Tab>']	lua/plugins/tabnine.lua	/^    ['<S-Tab>'] = function(fallback)$/;"	f
 ['<Tab>']	lua/plugins/lsp.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
 ['<Tab>']	lua/plugins/tabnine.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
+close_command	lua/plugins/configs/bufferline.lua	/^    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"$/;"	f
 config	lua/plugins/plugins.lua	/^    config = function()$/;"	f
 config	lua/plugins/plugins.lua	/^   config = function()$/;"	f
 config	lua/plugins/plugins.lua	/^  config = function()$/;"	f
+custom_filter	lua/plugins/configs/bufferline.lua	/^    custom_filter = function(buf_number, buf_numbers)$/;"	f
+diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^    diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f
+diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f
 error_msg	plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
 expand	lua/plugins/lsp.lua	/^    expand = function(args)$/;"	f
 expand	lua/plugins/tabnine.lua	/^    expand = function(args)$/;"	f
@@ -24,7 +28,12 @@ format	lua/plugins/tabnine.lua	/^    format = function(entry, vim_item)$/;"	f
 get_extension	lua/tools.lua	/^function get_extension( var ) -- recebe o argumento para a variável$/;"	f
 has_any_words_before	lua/plugins/lsp.lua	/^local has_any_words_before = function()$/;"	f
 has_any_words_before	lua/plugins/tabnine.lua	/^local has_any_words_before = function()$/;"	f
+left_mouse_command	lua/plugins/configs/bufferline.lua	/^    left_mouse_command = "buffer %d",    -- can be a string | function, see "Mouse actions"$/;"	f
+middle_mouse_command	lua/plugins/configs/bufferline.lua	/^    middle_mouse_command = nil,          -- can be a string | function, see "Mouse actions"$/;"	f
+name_formatter	lua/plugins/configs/bufferline.lua	/^    name_formatter = function(buf)  -- buf contains a "name", "path" and "bufnr"$/;"	f
+right_mouse_command	lua/plugins/configs/bufferline.lua	/^    right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"$/;"	f
 save_profiles	plugin/packer_compiled.lua	/^local function save_profiles(threshold)$/;"	f
+sort_by	lua/plugins/configs/bufferline.lua	/^    sort_by = 'insert_after_current', function(buffer_a, buffer_b)$/;"	f
 time	plugin/packer_compiled.lua	/^    time = function(chunk, start) end$/;"	f
 time	plugin/packer_compiled.lua	/^    time = function(chunk, start)$/;"	f
 try_loadstring	plugin/packer_compiled.lua	/^local function try_loadstring(s, component, name)$/;"	f
