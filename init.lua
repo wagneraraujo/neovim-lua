@@ -1,4 +1,4 @@
-
+require('impatient')
 require("basicneovim")
 require("plugins.plugins")
 require("tools")

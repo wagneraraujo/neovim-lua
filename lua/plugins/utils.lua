@@ -3,6 +3,8 @@ require'nvim-web-devicons'.get_icons()
 require'colorizer'.setup()
 require("bufferline").setup{}
 require('Comment').setup()
+
+
 require('nvim-autopairs').setup({
   enable_check_bracket_line = false
 })
@@ -110,3 +112,10 @@ require'nvim-treesitter.configs'.setup {
 }
 
 }
+
+  require'lspconfig'.gopls.setup {
+    on_attach = function(client)
+      -- [[ other on_attach code ]]
+      require 'illuminate'.on_attach(client)
+    end,
+  }

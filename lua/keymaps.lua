@@ -31,7 +31,8 @@ nnoremap <Leader>ip <Plug>(PromptJsFileImport)
 nnoremap <Leader>is <Plug>(SortJsFileImport)
 nnoremap <Leader>ic <Plug>(JsFixImport)
 
-
+:nnoremap <Leader>x :Bdelete<CR>
+command! -bang -complete=buffer -nargs=? Bclose Bdelete<bang> <args>
 
 ]])
 -- BASH - Auto preenche arquivos .sh que não existirem com a SheBang

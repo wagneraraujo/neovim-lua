@@ -81,4 +81,22 @@ au TermLeave * setlocal scrolloff=3
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 
+
+	set t_Co=256
+
+
+let term_program=$TERM_PROGRAM
+
+" Check for conflicts with Apple Terminal app
+if term_program !=? 'Apple_Terminal'
+    set termguicolors
+else
+    if $TERM !=? 'xterm-256color'
+        set termguicolors
+    endif
+endif
+
+
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
 ]])

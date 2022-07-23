@@ -38,4 +38,15 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
+
+set tagfunc=jsfileimport#tagfunc
+set runtimepath^=~/.vim/bundle/bbye
+
+let g:Illuminate_delay = 0
+let g:Illuminate_highlightUnderCursor = 0
+
 ]])
+
+  vim.api.nvim_command [[ hi def link LspReferenceText CursorLine ]]
+  vim.api.nvim_command [[ hi def link LspReferenceWrite CursorLine ]]
+  vim.api.nvim_command [[ hi def link LspReferenceRead CursorLine ]]

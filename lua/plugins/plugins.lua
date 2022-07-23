@@ -80,6 +80,30 @@ use {
 }
 
 use 'ludovicchabant/vim-gutentags'
+-- use 'nvim-lua/plenary.nvim'
+
+--close buffer  security
+use 'moll/vim-bbye'
+
+
+-- Lua
+use {
+  "ahmedkhalf/project.nvim",
+  config = function()
+		require("nvim-tree").setup({
+  respect_buf_cwd = true,
+  update_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true
+  },
+})
+  end
+}
+
+use 'lewis6991/impatient.nvim'
+use 'RRethy/vim-illuminate'
+
 
 end)
 
