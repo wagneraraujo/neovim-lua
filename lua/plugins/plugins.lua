@@ -124,8 +124,9 @@ use 'Valloric/MatchTagAlways'
 use 'mg979/vim-visual-multi'
 use { "catppuccin/nvim", as = "catppuccin" }
 
-
-
+use 'wellle/targets.vim'
+use 'chaoren/vim-wordmotion'
+use 'andymass/vim-matchup'
 end)
 
 

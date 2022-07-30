@@ -29,7 +29,6 @@ expand	lua/plugins/tabnine.lua	/^    expand = function(args)$/;"	f
 format	lua/plugins/lsp.lua	/^    format = function(entry, vim_item)$/;"	f
 format	lua/plugins/tabnine.lua	/^    format = function(entry, vim_item)$/;"	f
 get_extension	lua/tools.lua	/^function get_extension( var ) -- recebe o argumento para a variável$/;"	f
-has_any_words_before	lua/plugins/lsp.lua	/^local has_any_words_before = function()$/;"	f
 has_any_words_before	lua/plugins/tabnine.lua	/^local has_any_words_before = function()$/;"	f
 left_mouse_command	lua/plugins/configs/bufferline.lua	/^    left_mouse_command = "buffer %d",    -- can be a string | function, see "Mouse actions"$/;"	f
 middle_mouse_command	lua/plugins/configs/bufferline.lua	/^    middle_mouse_command = nil,          -- can be a string | function, see "Mouse actions"$/;"	f

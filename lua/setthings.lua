@@ -42,6 +42,7 @@ set tagfunc=jsfileimport#tagfunc
 set runtimepath^=~/.vim/bundle/bbye
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
+let g:loaded_matchit = 1
 
 let g:mta_use_matchparen_group = 1
 let g:mta_filetypes = {
