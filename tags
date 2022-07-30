@@ -23,6 +23,7 @@ custom_filter	lua/plugins/configs/bufferline.lua	/^    custom_filter = function(
 diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^    diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f
 diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f
 error_msg	plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
+expand	lua/plugins/configs/cmpconfig.lua	/^      expand = function(args)$/;"	f
 expand	lua/plugins/lsp.lua	/^    expand = function(args)$/;"	f
 expand	lua/plugins/lspneovim.lua	/^		expand = function(args)$/;"	f
 expand	lua/plugins/tabnine.lua	/^    expand = function(args)$/;"	f

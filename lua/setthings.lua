@@ -2,6 +2,7 @@
 vim.cmd([[
 
 let extension = expand('%:e')
+set completeopt=menu,menuone,noselect
 
 let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.ts,*.tsx,*.vue,*.svelte,*.jsp,*.php,*.erb'
 
