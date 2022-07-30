@@ -5,10 +5,6 @@ require'colorizer'.setup()
 --
 -- }
 require('Comment').setup()
-require('nvim-autopairs').setup({
-  enable_check_bracket_line = false
-})
-
 
 --identacao
 vim.opt.list = true
@@ -79,25 +75,13 @@ require('lualine').setup {
 }
 
 
-require('nvim-cursorline').setup {
-  cursorline = {
-    enable = true,
-    timeout = 1000,
-    number = false,
-  },
-  cursorword = {
-    enable = true,
-    min_length = 3,
-    hl = { underline = true },
-  }
-}
 
 require'nvim-treesitter.configs'.setup {
   context_commentstring = {
     enable = true,
     config = {
       javascript = {
-        __default = '// %s',
+        __default = '{/* %s */}',
         jsx_element = '{/* %s */}',
         jsx_fragment = '{/* %s */}',
         jsx_attribute = '// %s',
@@ -105,11 +89,17 @@ require'nvim-treesitter.configs'.setup {
       }
     }
   },
-	require'nvim-treesitter.configs'.setup {
   autotag = {
     enable = true,
+  },
+  rainbow = {
+    enable = true,
+    -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+    max_file_lines = nil, -- Do not enable for files with more than n lines, int
+    -- colors = {}, -- table of hex strings
+    -- termcolors = {} -- table of colour name strings
   }
-}
 
 }
 
@@ -133,4 +123,21 @@ require('lualine').setup {
   }
 }
 vim.cmd[[colorscheme tokyonight]]
+
+-- vim.g.catppuccin_flavour = "frappe"
+-- vim.cmd "colorscheme catppuccin"
+-- end themes config
+require('nvim-cursorline').setup {
+  cursorline = {
+    enable = true,
+    timeout = 1000,
+    number = false,
+  },
+  cursorword = {
+    enable = true,
+    min_length = 3,
+    hl = { underline = true },
+  }
+}
+
 

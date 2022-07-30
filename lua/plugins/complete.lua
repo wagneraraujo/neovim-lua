@@ -1,4 +1,4 @@
-if extension == "md" then
+	if extension == "md" then
   require("plugins.tabnine")
 else
 

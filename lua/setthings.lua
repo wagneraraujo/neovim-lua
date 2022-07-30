@@ -3,7 +3,6 @@ vim.cmd([[
 
 let extension = expand('%:e')
 
-let g:vim_matchtag_enable_by_default = 0
 let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.ts,*.tsx,*.vue,*.svelte,*.jsp,*.php,*.erb'
 
 filetype plugin indent on
@@ -44,4 +43,14 @@ set runtimepath^=~/.vim/bundle/bbye
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
 
+let g:mta_use_matchparen_group = 1
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'jsx' : 1,
+    \ 'tsx' : 1,
+    \ 'jinja' : 1,
+    \}
+highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
 ]])

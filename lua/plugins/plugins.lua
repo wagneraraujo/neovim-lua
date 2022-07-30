@@ -28,6 +28,7 @@ use 'rafamadriz/friendly-snippets'
 use 'ray-x/lsp_signature.nvim'
 use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 use 'onsails/lspkind-nvim'
+use "williamboman/nvim-lsp-installer"
 use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
 
@@ -114,6 +115,16 @@ use 'maxmellon/vim-jsx-pretty'
 --     require('goto-preview').setup {}
 --   end
 -- }
+
+
+-- use 'karb94/neoscroll.nvim'
+use 'p00f/nvim-ts-rainbow'
+
+use 'Valloric/MatchTagAlways'
+use 'mg979/vim-visual-multi'
+use { "catppuccin/nvim", as = "catppuccin" }
+
+
 
 end)
 
