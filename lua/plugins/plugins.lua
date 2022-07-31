@@ -73,13 +73,6 @@ use{ 'anuvyklack/pretty-fold.nvim',
 use 'windwp/nvim-ts-autotag'
 use 'marko-cerovac/material.nvim'
 
-use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-}
-
 use 'ludovicchabant/vim-gutentags'
 -- use 'nvim-lua/plenary.nvim'
 
@@ -129,6 +122,10 @@ use 'chaoren/vim-wordmotion'
 use 'andymass/vim-matchup'
 use 'pseewald/vim-anyfold'
 use 'matze/vim-move'
+
+use 'b3nj5m1n/kommentary'
+
+
 end)
 
 

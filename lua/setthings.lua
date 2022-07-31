@@ -1,19 +1,5 @@
 
 vim.cmd([[
-autocmd FileType html,css,php,js,tsx,jsx  EmmetInstall
-let g:user_emmet_install_global =1
-let g:user_emmet_leader_key=','
-let g:user_emmet_settings = {
-      \  'javascript' : {
-        \      'extends' : 'tsx',
-        \  },
-        \}
-let g:user_emmet_mode='n'    "only enable normal mode functions.
-let g:user_emmet_mode='inv'  "enable all functions, which is equal to
-let g:user_emmet_mode='a'    "enable all function in all mode.
-let extension = expand('%:e')
-set completeopt=menu,menuone,noselect
-
 let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.ts,*.tsx,*.vue,*.svelte,*.jsp,*.php,*.erb'
 
 filetype plugin indent on

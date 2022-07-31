@@ -4,7 +4,7 @@ require'colorizer'.setup()
 -- require("bufferline").setup{
 --
 -- }
-require('Comment').setup()
+
 
 --identacao
 vim.opt.list = true
@@ -94,9 +94,6 @@ require'nvim-treesitter.configs'.setup {
     -- [options]
   },
 
-  context_commentstring = {
-    enable = true
-  },
 }
 
 	--themes config 
@@ -135,5 +132,30 @@ require('nvim-cursorline').setup {
     hl = { underline = true },
   }
 }
+require'nvim-treesitter.configs'.setup {
+  context_commentstring = {
+    enable = true
+  }
+}
+require('kommentary.config').configure_language('javascriptreact', {
+	 single_line_comment_string = "//",
+    multi_line_comment_strings = {"{/*", "*/}"},
+  hook_function = function()
+    require('ts_context_commentstring.internal').update_commentstring()
+  end,
+})
+require('kommentary.config').configure_language('typescriptreact', {
+	 single_line_comment_string = "//",
+    multi_line_comment_strings = {"{/*", "*/}"},
+  hook_function = function()
+    require('ts_context_commentstring.internal').update_commentstring()
+  end,
+})
 
-
+require('kommentary.config').configure_language('javascript', {
+	 single_line_comment_string = "//",
+    multi_line_comment_strings = {"{/*", "*/}"},
+  hook_function = function()
+    require('ts_context_commentstring.internal').update_commentstring()
+  end,
+})
