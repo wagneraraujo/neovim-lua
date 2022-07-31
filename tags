@@ -43,3 +43,6 @@ sumneko_lua	lua/plugins/lspneovim.lua	/^	sumneko_lua = function(opts)$/;"	f
 time	plugin/packer_compiled.lua	/^    time = function(chunk, start) end$/;"	f
 time	plugin/packer_compiled.lua	/^    time = function(chunk, start)$/;"	f
 try_loadstring	plugin/packer_compiled.lua	/^local function try_loadstring(s, component, name)$/;"	f
+user_emmet_mode	lua/setthings.lua	/^let g:user_emmet_mode='a'    "enable all function in all mode.$/;"	f	unknown:g
+user_emmet_mode	lua/setthings.lua	/^let g:user_emmet_mode='inv'  "enable all functions, which is equal to$/;"	f	unknown:g
+user_emmet_mode	lua/setthings.lua	/^let g:user_emmet_mode='n'    "only enable normal mode functions.$/;"	f	unknown:g

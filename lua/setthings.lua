@@ -1,6 +1,16 @@
 
 vim.cmd([[
-
+autocmd FileType html,css,php,js,tsx,jsx  EmmetInstall
+let g:user_emmet_install_global =1
+let g:user_emmet_leader_key=','
+let g:user_emmet_settings = {
+      \  'javascript' : {
+        \      'extends' : 'tsx',
+        \  },
+        \}
+let g:user_emmet_mode='n'    "only enable normal mode functions.
+let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+let g:user_emmet_mode='a'    "enable all function in all mode.
 let extension = expand('%:e')
 set completeopt=menu,menuone,noselect
 
@@ -55,4 +65,16 @@ let g:mta_filetypes = {
     \ 'jinja' : 1,
     \}
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
+
+
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+
+let g:anyfold_fold_comments=1
+set foldlevel=0
+autocmd Filetype cpp set foldignore=#/
+
 ]])
+

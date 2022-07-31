@@ -77,18 +77,6 @@ require('lualine').setup {
 
 
 require'nvim-treesitter.configs'.setup {
-  context_commentstring = {
-    enable = true,
-    config = {
-      javascript = {
-        __default = '{/* %s */}',
-        jsx_element = '{/* %s */}',
-        jsx_fragment = '{/* %s */}',
-        jsx_attribute = '// %s',
-        comment = '// %s'
-      }
-    }
-  },
   autotag = {
     enable = true,
   },
@@ -106,6 +94,9 @@ require'nvim-treesitter.configs'.setup {
     -- [options]
   },
 
+  context_commentstring = {
+    enable = true
+  },
 }
 
 	--themes config 

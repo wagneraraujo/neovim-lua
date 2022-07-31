@@ -127,6 +127,8 @@ use { "catppuccin/nvim", as = "catppuccin" }
 use 'wellle/targets.vim'
 use 'chaoren/vim-wordmotion'
 use 'andymass/vim-matchup'
+use 'pseewald/vim-anyfold'
+use 'matze/vim-move'
 end)
 
 
