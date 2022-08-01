@@ -17,7 +17,6 @@
 ['<Tab>']	lua/plugins/tabnine.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
 close_command	lua/plugins/configs/bufferline.lua	/^    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"$/;"	f
 config	lua/plugins/plugins.lua	/^   config = function()$/;"	f
-config	lua/plugins/plugins.lua	/^  config = function()$/;"	f
 custom_filter	lua/plugins/configs/bufferline.lua	/^    custom_filter = function(buf_number, buf_numbers)$/;"	f
 diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^    diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f
 diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f

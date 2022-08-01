@@ -26,7 +26,7 @@ use 'saadparwaiz1/cmp_luasnip'
 use 'L3MON4D3/LuaSnip'
 use 'rafamadriz/friendly-snippets'
 use 'ray-x/lsp_signature.nvim'
-use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+-- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 use 'onsails/lspkind-nvim'
 use "williamboman/nvim-lsp-installer"
 use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -80,48 +80,20 @@ use 'ludovicchabant/vim-gutentags'
 use 'moll/vim-bbye'
 
 
--- Lua
-use {
-  "ahmedkhalf/project.nvim",
-  config = function()
-		require("nvim-tree").setup({
-  respect_buf_cwd = true,
-  update_cwd = true,
-  update_focused_file = {
-    enable = true,
-    update_cwd = true
-  },
-})
-  end
-}
-
 use 'lewis6991/impatient.nvim'
 
 --themes
-use "EdenEast/nightfox.nvim" -- Packer
 use 'folke/tokyonight.nvim'
 use 'maxmellon/vim-jsx-pretty'
 
--- use {
---   'rmagatti/goto-preview',
---   config = function()
---     require('goto-preview').setup {}
---   end
--- }
 
-
--- use 'karb94/neoscroll.nvim'
+use 'karb94/neoscroll.nvim'
 use 'p00f/nvim-ts-rainbow'
 
 use 'Valloric/MatchTagAlways'
 use 'mg979/vim-visual-multi'
 use { "catppuccin/nvim", as = "catppuccin" }
 
-use 'wellle/targets.vim'
-use 'chaoren/vim-wordmotion'
-use 'andymass/vim-matchup'
-use 'pseewald/vim-anyfold'
-use 'matze/vim-move'
 
 use 'b3nj5m1n/kommentary'
 
