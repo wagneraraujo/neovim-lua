@@ -14,7 +14,12 @@ use 'kyazdani42/nvim-web-devicons'
 --use 'tamton-aquib/staline.nvim'
 use 'lukas-reineke/indent-blankline.nvim'
 use 'norcalli/nvim-colorizer.lua'
-use 'tpope/vim-surround'
+use {
+        "ur4ltz/surround.nvim",
+        config = function()
+            require"surround".setup {mappings_style = "surround"}
+        end
+    }
 use 'windwp/nvim-autopairs'
 use 'neovim/nvim-lspconfig'
 use 'hrsh7th/nvim-cmp'
@@ -96,8 +101,12 @@ use { "catppuccin/nvim", as = "catppuccin" }
 
 
 use 'b3nj5m1n/kommentary'
+use 'andweeb/presence.nvim'
+use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
+use 'terrortylor/nvim-comment'
 
-
+--live server 
+ use {'turbio/bracey.vim', run = 'cd app & npm install --prefix server'}
 end)
 
 

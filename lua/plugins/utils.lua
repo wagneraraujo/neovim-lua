@@ -122,30 +122,59 @@ require('nvim-cursorline').setup {
     hl = { underline = true },
   }
 }
-require'nvim-treesitter.configs'.setup {
+-- include treesitter and its config
+require('nvim-treesitter.configs').setup{
+
   context_commentstring = {
     enable = true
-  }
+  },
+  ensure_installed = {'lua', 'typescript',
+                      'regex', 'bash', 'cmake', 'css', 'javascript',
+                      'html', 'comment', 'rust',  'markdown',
+                      'make', 'json', 'vim'},
+  highlight = {
+    enable = true,
+    disable = {},
+  },
+
+  rainbow = {
+    enable = false,
+    -- disable = { 'jsx', 'cpp' },
+    extended_mode = true,
+    max_file_lines = nil,
+    -- colors = {},
+    -- termcolors = {}
+  },
+
+  autotag = {
+    enable = true,
+  },
+
+  refactor = {
+    smart_rename = {
+      enable = true,
+      keymaps = {
+        smart_rename = 'grr',
+      },
+    },
+    navigation = {
+      enable = true,
+      keymaps = {
+        goto_definition = 'gnd',
+        list_definitions = 'gnD',
+        list_definitions_toc = 'gO',
+        goto_next_usage = '<A-]>',
+        goto_previous_usage = '<A-[>',
+      },
+    },
+  },
 }
-require('kommentary.config').configure_language('javascriptreact', {
-	 single_line_comment_string = "//",
-    multi_line_comment_strings = {"{/*", "*/}"},
-  hook_function = function()
-    require('ts_context_commentstring.internal').update_commentstring()
-  end,
-})
-require('kommentary.config').configure_language('typescriptreact', {
-	 single_line_comment_string = "//",
-    multi_line_comment_strings = {"{/*", "*/}"},
-  hook_function = function()
-    require('ts_context_commentstring.internal').update_commentstring()
-  end,
+
+-- include presence and its config
+require('presence'):setup({
+    enable_line_number = false,
+    main_image = 'file',
+    neovim_image_text = 'Its Neovim buddy!!!',
+    debounce_timeout = 10,
 })
 
-require('kommentary.config').configure_language('javascript', {
-	 single_line_comment_string = "//",
-    multi_line_comment_strings = {"{/*", "*/}"},
-  hook_function = function()
-    require('ts_context_commentstring.internal').update_commentstring()
-  end,
-})

@@ -1,3 +1,4 @@
+keymap = vim.keymap.set
 
 vim.cmd([[
 nnoremap <C-s> :w<CR>
@@ -40,3 +41,14 @@ set wildignore+=*node_modules/**
 -- BASH - Auto preenche arquivos .sh que não existirem com a SheBang
 vim.cmd([[ autocmd BufNewFile *.sh :call append(0, '#!/usr/bin/env bash') ]])
 
+-- LSP Diagnostics Toggle bindings
+keymap('n', '<Leader>dd', '<cmd> ToggleDiag <cr>')
+keymap('n', '<leader>du', '<Plug>(toggle-lsp-diag-underline)')
+keymap('n', '<leader>ds', '<Plug>(toggle-lsp-diag-signs)')
+keymap('n', '<leader>dv', '<Plug>(toggle-lsp-diag-vtext)')
+keymap('n', '<leader>di', '<Plug>(toggle-lsp-diag-update_in_insert)')
+
+-- Bracey bindings
+keymap('n', '<Leader>b',    '<cmd> Bracey <cr>')
+keymap('n', '<Leader>bb',   '<cmd> BraceyStop <cr>')
+keymap('n', '<Leader>bbb',  '<cmd> BraceyReload <cr>')
