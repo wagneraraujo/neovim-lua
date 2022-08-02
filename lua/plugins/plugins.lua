@@ -106,7 +106,12 @@ use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 use 'terrortylor/nvim-comment'
 
 --live server 
- use {'turbio/bracey.vim', run = 'cd app & npm install --prefix server'}
+ use 'bluz71/vim-nightfly-guicolors'
+use {'turbio/bracey.vim', run = 'cd app & npm install --prefix server'}
+
+use({ "kelly-lin/telescope-ag", requires = { { "nvim-telescope/telescope.nvim" } } })
+
+
 end)
 
 

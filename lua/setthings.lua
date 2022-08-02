@@ -62,5 +62,7 @@ let g:anyfold_fold_comments=1
 set foldlevel=0
 autocmd Filetype cpp set foldignore=#/
 
+
 ]])
+
 

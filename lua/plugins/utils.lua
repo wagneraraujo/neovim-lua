@@ -1,6 +1,9 @@
 -- Para nvim-web-devicons
 require'nvim-web-devicons'.get_icons()
 require'colorizer'.setup()
+require('telescope').load_extension('ag')
+
+
 -- require("bufferline").setup{
 --
 -- }
@@ -105,7 +108,9 @@ require('lualine').setup {
     -- ... your lualine config
   }
 }
-vim.cmd[[colorscheme tokyonight]]
+-- vim.cmd[[colorscheme tokyonight]]
+vim.cmd [[colorscheme nightfly]]
+
 
 -- vim.g.catppuccin_flavour = "frappe"
 -- vim.cmd "colorscheme catppuccin"

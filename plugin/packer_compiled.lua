@@ -291,6 +291,11 @@ _G.packer_plugins = {
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/tagalong.vim",
     url = "https://github.com/AndrewRadev/tagalong.vim"
   },
+  ["telescope-ag"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/telescope-ag",
+    url = "https://github.com/kelly-lin/telescope-ag"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -340,6 +345,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/vim-matchtag",
     url = "https://github.com/leafOfTree/vim-matchtag"
+  },
+  ["vim-nightfly-guicolors"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
+    url = "https://github.com/bluz71/vim-nightfly-guicolors"
   },
   ["vim-simple-emoji"] = {
     loaded = true,
