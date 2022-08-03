@@ -61,7 +61,6 @@ use 'dense-analysis/ale'
 
 use 'wakatime/vim-wakatime'
 --config for react
-use 'mattn/emmet-vim'
 use 'AndrewRadev/tagalong.vim'
 use 'sbdchd/neoformat'
 use 'alvan/vim-closetag'
@@ -110,7 +109,8 @@ use 'terrortylor/nvim-comment'
 use {'turbio/bracey.vim', run = 'cd app & npm install --prefix server'}
 
 use({ "kelly-lin/telescope-ag", requires = { { "nvim-telescope/telescope.nvim" } } })
-
+use 'aca/emmet-ls'
+use 'mattn/emmet-vim'
 
 end)
 

@@ -117,5 +117,4 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 autocmd FileType apache setlocal commentstring=#\ %s
 
-
 ]])

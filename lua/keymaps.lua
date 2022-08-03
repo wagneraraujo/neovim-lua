@@ -37,6 +37,8 @@ nmap <C-u> <Plug>(PromptJsFileImport)
 let g:js_file_import_use_telescope = 1
 set wildignore+=*node_modules/**
 
+let g:user_emmet_leader_key='<C-,>,'
+
 ]])
 -- BASH - Auto preenche arquivos .sh que não existirem com a SheBang
 vim.cmd([[ autocmd BufNewFile *.sh :call append(0, '#!/usr/bin/env bash') ]])
