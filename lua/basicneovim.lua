@@ -3,6 +3,7 @@ vim.cmd([[
 syntax on
 set shada="NONE"
 set re=1
+set nohlsearch
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -87,7 +88,6 @@ au TermLeave * setlocal scrolloff=3
 
 let term_program=$TERM_PROGRAM
 
-" Check for conflicts with Apple Terminal app
 if term_program !=? 'Apple_Terminal'
     set termguicolors
 else
@@ -102,7 +102,6 @@ let &t_ZR="\e[23m"
 
 nnoremap <c-z> <nop>
 
-" The Silver Searcher
 if executable('ag')
   let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
   set grepprg=ag\ --nogroup\ --nocolor
@@ -116,5 +115,6 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 autocmd FileType apache setlocal commentstring=#\ %s
-
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
 ]])

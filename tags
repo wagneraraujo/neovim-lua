@@ -16,7 +16,7 @@
 ['<Tab>']	lua/plugins/lsp.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
 ['<Tab>']	lua/plugins/tabnine.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
 _find_files	lua/functions.lua	/^function _find_files()$/;"	f
-before	lua/plugins/configs/lsp-config/cmp.lua	/^      before = function (entry, vim_item)$/;"	f
+before	lua/plugins/configs/lsp-config/cmpconfiglua.lua	/^      before = function (entry, vim_item)$/;"	f
 close_command	lua/plugins/configs/bufferline.lua	/^    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"$/;"	f
 config	lua/plugins/plugins.lua	/^        config = function()$/;"	f
 config	lua/plugins/plugins.lua	/^   config = function()$/;"	f
@@ -26,7 +26,6 @@ diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^    diagnostics_indic
 diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f
 error_msg	plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
 expand	lua/plugins/configs/cmpconfig.lua	/^      expand = function(args)$/;"	f
-expand	lua/plugins/configs/lsp-config/cmp.lua	/^  expand = function(args)$/;"	f
 expand	lua/plugins/lsp.lua	/^    expand = function(args)$/;"	f
 expand	lua/plugins/lspneovim.lua	/^		expand = function(args)$/;"	f
 expand	lua/plugins/tabnine.lua	/^    expand = function(args)$/;"	f

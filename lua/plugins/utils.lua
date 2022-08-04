@@ -1,7 +1,7 @@
 -- Para nvim-web-devicons
 require'nvim-web-devicons'.get_icons()
 require'colorizer'.setup()
-require('telescope').load_extension('ag')
+-- require('telescope').load_extension('ag')
 
 
 -- require("bufferline").setup{
@@ -96,6 +96,14 @@ require'nvim-treesitter.configs'.setup {
     disable = { "c", "ruby" },  -- optional, list of language that will be disabled
     -- [options]
   },
+	  ensure_installed = "all",
+		  highlight = {
+    enable = true,
+    disable = { "lua" }
+  },
+  indent = {
+    enable = true
+  }
 
 }
 
