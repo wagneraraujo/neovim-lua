@@ -117,4 +117,13 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 autocmd FileType apache setlocal commentstring=#\ %s
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
+
+
+au! BufRead,BufNewFile *.bloc set filetype=html
+autocmd BufNewFile,BufRead *.block setfiletype html
+
+
+
+ 
+
 ]])
