@@ -1,4 +1,3 @@
-
 vim.cmd([[
 syntax on
 set shada="NONE"
@@ -20,12 +19,11 @@ set exrc                                                  " exec command in init
 set secure                                                " safely do command above
 filetype plugin indent on
 set noexpandtab                                           " use only '\t' as tab
-set scrolloff=4             
-set visualbell                          
+set scrolloff=4
+set visualbell
 set ttyfast
 set wildmenu
 set backspace=indent,eol,start
-set autoindent
 set lazyredraw
 let mapleader=','
 set hidden
@@ -33,6 +31,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set cursorline
 set fileformats=unix,dos,mac
 if exists('$SHELL')
     set shell=$SHELL
@@ -41,6 +40,7 @@ else
 endif
 syntax on
 set ruler
+set nu!
 set number
 let no_buffers_menu=1
 set mousemodel=popup
@@ -56,7 +56,6 @@ set modelines=10
 set title
 set titleold="Terminal"
 set titlestring=%F
-
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
@@ -69,7 +68,6 @@ if has("gui_running")
   endif
 else
   let g:CSApprox_loaded = 1
-
 endif
 
 
@@ -119,11 +117,11 @@ nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 
 
-au! BufRead,BufNewFile *.bloc set filetype=html
-autocmd BufNewFile,BufRead *.block setfiletype html
+au! BufRead,BufNewFile *.block set filetype=html
 
 
-
- 
-
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
 ]])
