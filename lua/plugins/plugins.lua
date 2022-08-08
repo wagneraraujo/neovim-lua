@@ -111,7 +111,8 @@ use {'turbio/bracey.vim', run = 'cd app & npm install --prefix server'}
 use({ "kelly-lin/telescope-ag", requires = { { "nvim-telescope/telescope.nvim" } } })
 use 'aca/emmet-ls'
 use 'mattn/emmet-vim'
-
+use 'kaiuri/nvim-juliana'
+	use { "williamboman/mason.nvim" }
 end)
 
 

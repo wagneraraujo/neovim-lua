@@ -99,11 +99,12 @@ require'nvim-treesitter.configs'.setup {
 	  ensure_installed = "all",
 		  highlight = {
     enable = true,
-    disable = { "lua" }
+    disable = { "lua" },
+		additional_vim_regex_highlighting = { 'typescript' },
   },
   indent = {
     enable = true
-  }
+  },
 
 }
 
@@ -122,7 +123,6 @@ require('onedark').setup {
     style = 'darker'
 }
 require('onedark').load()
-
 -- vim.g.catppuccin_flavour = "frappe"
 -- vim.cmd "colorscheme catppuccin"
 -- end themes config
@@ -194,3 +194,12 @@ require('presence'):setup({
     debounce_timeout = 10,
 })
 
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})

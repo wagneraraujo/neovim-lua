@@ -219,6 +219,11 @@ _G.packer_plugins = {
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
     url = "https://github.com/yamatsum/nvim-cursorline"
   },
+  ["nvim-juliana"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/nvim-juliana",
+    url = "https://github.com/kaiuri/nvim-juliana"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
