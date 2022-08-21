@@ -1,3 +1,14 @@
+_G.__luacache_config = {
+  chunks = {
+    enable = true,
+    path = vim.fn.stdpath('cache')..'/luacache_chunks',
+  },
+  modpaths = {
+    enable = true,
+    path = vim.fn.stdpath('cache')..'/luacache_modpaths',
+  }
+}
+require('impatient')
 require('impatient')
 require("basicneovim")
 require("functions")
@@ -10,9 +21,8 @@ require("plugins.nvimtree")
 require("setthings")
 require("plugins.complete")
 require("plugins.configs.bufferline")
-require("plugins.configs.lsp-config.cmpconfiglua")
-require("plugins.configs.lsp-config.configlsp")
+--[[ require("plugins.configs.lsp-config.cmpconfiglua")
+require("plugins.configs.lsp-config.configlsp") ]]
 require("plugins.configs.lsp-config.emmet-lsp")
 require("plugins.configs.telescope")
 
--- require("plugins.configs.cmpconfig")

@@ -66,7 +66,7 @@ vnoremap K :m '<-2<CR>gv=gv
 let g:anyfold_fold_comments=1
 set foldlevel=0
 autocmd Filetype cpp set foldignore=#/
-
+let g:cursorhold_updatetime = 100
 
 ]])
 

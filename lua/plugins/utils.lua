@@ -79,34 +79,6 @@ require('lualine').setup {
 
 
 
-require'nvim-treesitter.configs'.setup {
-  autotag = {
-    enable = true,
-  },
-  rainbow = {
-    enable = true,
-    -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-    max_file_lines = nil, -- Do not enable for files with more than n lines, int
-    -- colors = {}, -- table of hex strings
-    -- termcolors = {} -- table of colour name strings
-  },
-	 matchup = {
-    enable = true,              -- mandatory, false will disable the whole extension
-    disable = { "c", "ruby" },  -- optional, list of language that will be disabled
-    -- [options]
-  },
-	  ensure_installed = "all",
-		  highlight = {
-    enable = true,
-    disable = { "lua" },
-		additional_vim_regex_highlighting = { 'typescript' },
-  },
-  indent = {
-    enable = true
-  },
-
-}
 
 	--themes config 
 
@@ -140,27 +112,29 @@ require('nvim-cursorline').setup {
 }
 -- include treesitter and its config
 require('nvim-treesitter.configs').setup{
-
-  context_commentstring = {
-    enable = true
-  },
   ensure_installed = {'lua', 'typescript',
-                      'regex', 'bash', 'cmake', 'css', 'javascript',
+                      'regex', 'css', 'javascript',
                       'html', 'comment', 'rust',  'markdown',
-                      'make', 'json', 'vim'},
+                       'json', 'vim'},
   highlight = {
     enable = true,
     disable = {},
+		    additional_vim_regex_highlighting = false,
   },
-
+	 sync_install = false,
+	 context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
   rainbow = {
-    enable = false,
-    -- disable = { 'jsx', 'cpp' },
-    extended_mode = true,
+    enable = true,
+    disable = { "html" },
+    extended_mode = false,
     max_file_lines = nil,
-    -- colors = {},
-    -- termcolors = {}
   },
+  autopairs = { enable = true },
+  incremental_selection = { enable = true },
+  indent = { enable = false },
 
   autotag = {
     enable = true,
@@ -184,6 +158,7 @@ require('nvim-treesitter.configs').setup{
       },
     },
   },
+
 }
 
 -- include presence and its config

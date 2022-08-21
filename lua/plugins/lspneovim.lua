@@ -30,17 +30,13 @@ cmp.setup {
 
 local servers = {
 	"bashls",
-	"clangd",
 	"cssls",
-	"gopls",
 	"html",
-	"pyright",
-	"rust_analyzer",
-	"sumneko_lua",
 	"tailwindcss",
 	"tsserver",
+	"java"
 }
-local has_formatter = { "gopls", "html", "rust_analyzer", "sumneko_lua", "tsserver" }
+local has_formatter = {  "html", "tsserver" }
 for _, name in pairs(servers) do
 	local found, server = require("nvim-lsp-installer").get_server(name)
 	if found and not server:is_installed() then
