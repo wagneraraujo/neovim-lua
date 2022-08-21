@@ -9,6 +9,8 @@ use {
   'nvim-telescope/telescope.nvim',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
+use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
 
 use 'kyazdani42/nvim-web-devicons'
 --use 'tamton-aquib/staline.nvim'
@@ -38,7 +40,12 @@ use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
 
 use 'tpope/vim-fugitive'
-use 'lewis6991/gitsigns.nvim'
+use {
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+  end
+}
 
   -- Navigation
 use 'justinmk/vim-sneak'
@@ -65,6 +72,7 @@ use 'AndrewRadev/tagalong.vim'
 use 'sbdchd/neoformat'
 use 'alvan/vim-closetag'
 use 'leafOfTree/vim-matchtag'
+use 'terrortylor/nvim-comment'
 use 'JoosepAlviste/nvim-ts-context-commentstring'
 use {'kristijanhusak/vim-js-file-import', run ='npm install'}
 
@@ -102,7 +110,6 @@ use { "catppuccin/nvim", as = "catppuccin" }
 use 'b3nj5m1n/kommentary'
 use 'andweeb/presence.nvim'
 use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
-use 'terrortylor/nvim-comment'
 
 --live server 
  use 'bluz71/vim-nightfly-guicolors'
@@ -114,6 +121,14 @@ use 'mattn/emmet-vim'
 use 'kaiuri/nvim-juliana'
 	use { "williamboman/mason.nvim" }
 	use 'antoinemadec/FixCursorHold.nvim'
+
+	-- lua with packer.nvim
+use {
+  "max397574/better-escape.nvim",
+  config = function()
+    require("better_escape").setup()
+  end,
+}
 end)
 
 

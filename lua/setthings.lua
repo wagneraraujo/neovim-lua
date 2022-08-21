@@ -68,6 +68,7 @@ set foldlevel=0
 autocmd Filetype cpp set foldignore=#/
 let g:cursorhold_updatetime = 100
 
+set statusline+=%{get(b:,'gitsigns_status','')}
 ]])
 
 

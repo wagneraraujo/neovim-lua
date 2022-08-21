@@ -84,6 +84,12 @@ _G.packer_plugins = {
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/ale",
     url = "https://github.com/dense-analysis/ale"
   },
+  ["better-escape.nvim"] = {
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0" },
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/better-escape.nvim",
+    url = "https://github.com/max397574/better-escape.nvim"
+  },
   ["bracey.vim"] = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/bracey.vim",
@@ -125,6 +131,7 @@ _G.packer_plugins = {
     url = "https://github.com/mattn/emmet-vim"
   },
   ["gitsigns.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
@@ -276,6 +283,11 @@ _G.packer_plugins = {
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/telescope-ag",
     url = "https://github.com/kelly-lin/telescope-ag"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -354,10 +366,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 -- Config for: surround.nvim
 time([[Config for surround.nvim]], true)
 try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0", "config", "surround.nvim")
 time([[Config for surround.nvim]], false)
+-- Config for: better-escape.nvim
+time([[Config for better-escape.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
+time([[Config for better-escape.nvim]], false)
 -- Config for: pretty-fold.nvim
 time([[Config for pretty-fold.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16pretty-fold\frequire\0", "config", "pretty-fold.nvim")

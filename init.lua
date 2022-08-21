@@ -25,4 +25,5 @@ require("plugins.configs.bufferline")
 require("plugins.configs.lsp-config.configlsp") ]]
 require("plugins.configs.lsp-config.emmet-lsp")
 require("plugins.configs.telescope")
+require("plugins.gitsigns")
 
