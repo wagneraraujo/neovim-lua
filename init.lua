@@ -1,15 +1,15 @@
 _G.__luacache_config = {
-  chunks = {
-    enable = true,
-    path = vim.fn.stdpath('cache')..'/luacache_chunks',
-  },
-  modpaths = {
-    enable = true,
-    path = vim.fn.stdpath('cache')..'/luacache_modpaths',
-  }
+	chunks = {
+		enable = true,
+		path = vim.fn.stdpath("cache") .. "/luacache_chunks",
+	},
+	modpaths = {
+		enable = true,
+		path = vim.fn.stdpath("cache") .. "/luacache_modpaths",
+	},
 }
-require('impatient')
-require('impatient')
+require("impatient")
+require("impatient")
 require("basicneovim")
 require("functions")
 require("plugins.plugins")
@@ -27,3 +27,7 @@ require("plugins.configs.lsp-config.emmet-lsp")
 require("plugins.configs.telescope")
 require("plugins.gitsigns")
 
+local lsp = require("lsp-zero")
+
+lsp.preset("recommended")
+lsp.setup()

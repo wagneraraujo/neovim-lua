@@ -72,3 +72,5 @@ set statusline+=%{get(b:,'gitsigns_status','')}
 ]])
 
 
+vim.opt.signcolumn = 'yes'
+vim.opt.termguicolors = true
