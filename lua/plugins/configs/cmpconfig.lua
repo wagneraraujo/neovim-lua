@@ -12,6 +12,7 @@ local servers = {
 	"sumneko_lua",
 	"tailwindcss",
 	"tsserver",
+	"java"
 }
   cmp.setup({
     snippet = {
@@ -78,3 +79,6 @@ local servers = {
   require('lspconfig')['tsserver'].setup {
     capabilities = capabilities
   }
+	require'lspconfig'.jdtls.setup{}
+require'lspconfig'.java_language_server.setup{}
+

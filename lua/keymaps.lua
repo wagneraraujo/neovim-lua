@@ -39,18 +39,38 @@ set wildignore+=*node_modules/**
 
 let g:user_emmet_leader_key='<C-,>,'
 
+
+
+
+
+
+
+nnoremap <A-o> <Cmd>lua require'jdtls'.organize_imports()<CR>
+nnoremap crv <Cmd>lua require('jdtls').extract_variable()<CR>
+vnoremap crv <Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>
+nnoremap crc <Cmd>lua require('jdtls').extract_constant()<CR>
+vnoremap crc <Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>
+vnoremap crm <Esc><Cmd>lua require('jdtls').extract_method(true)<CR>
+
+
+nnoremap <leader>df <Cmd>lua require'jdtls'.test_class()<CR>
+nnoremap <leader>dn <Cmd>lua require'jdtls'.test_nearest_method()<CR>
+
+
+
+
 ]])
 -- BASH - Auto preenche arquivos .sh que não existirem com a SheBang
 vim.cmd([[ autocmd BufNewFile *.sh :call append(0, '#!/usr/bin/env bash') ]])
 
 -- LSP Diagnostics Toggle bindings
-keymap('n', '<Leader>dd', '<cmd> ToggleDiag <cr>')
-keymap('n', '<leader>du', '<Plug>(toggle-lsp-diag-underline)')
-keymap('n', '<leader>ds', '<Plug>(toggle-lsp-diag-signs)')
-keymap('n', '<leader>dv', '<Plug>(toggle-lsp-diag-vtext)')
-keymap('n', '<leader>di', '<Plug>(toggle-lsp-diag-update_in_insert)')
+keymap("n", "<Leader>dd", "<cmd> ToggleDiag <cr>")
+keymap("n", "<leader>du", "<Plug>(toggle-lsp-diag-underline)")
+keymap("n", "<leader>ds", "<Plug>(toggle-lsp-diag-signs)")
+keymap("n", "<leader>dv", "<Plug>(toggle-lsp-diag-vtext)")
+keymap("n", "<leader>di", "<Plug>(toggle-lsp-diag-update_in_insert)")
 
 -- Bracey bindings
-keymap('n', '<Leader>b',    '<cmd> Bracey <cr>')
-keymap('n', '<Leader>bb',   '<cmd> BraceyStop <cr>')
-keymap('n', '<Leader>bbb',  '<cmd> BraceyReload <cr>')
+keymap("n", "<Leader>b", "<cmd> Bracey <cr>")
+keymap("n", "<Leader>bb", "<cmd> BraceyStop <cr>")
+keymap("n", "<Leader>bbb", "<cmd> BraceyReload <cr>")

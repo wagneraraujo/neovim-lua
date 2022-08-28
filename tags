@@ -9,12 +9,15 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/9873a6b5/
+Itkey_on_attach	lua/plugins/configs/lsp-config/java.lua	/^Itkey_on_attach = function(client, bufnr)$/;"	f
 ["<S-Tab>"]	lua/plugins/lspneovim.lua	/^		["<S-Tab>"] = cmp.mapping(function(fallback)$/;"	f
 ["<Tab>"]	lua/plugins/lspneovim.lua	/^		["<Tab>"] = cmp.mapping(function(fallback)$/;"	f
 ['<S-Tab>']	lua/plugins/tabnine.lua	/^    ['<S-Tab>'] = function(fallback)$/;"	f
 ['<Tab>']	lua/plugins/tabnine.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
 _find_files	lua/functions.lua	/^function _find_files()$/;"	f
 before	lua/plugins/configs/lsp-config/cmpconfiglua.lua	/^      before = function (entry, vim_item)$/;"	f
+buf_set_keymap	lua/plugins/configs/lsp-config/java.lua	/^local function buf_set_keymap(...)$/;"	f
+buf_set_option	lua/plugins/configs/lsp-config/java.lua	/^local function buf_set_option(...)$/;"	f
 close_command	lua/plugins/configs/bufferline.lua	/^    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"$/;"	f
 config	lua/plugins/plugins.lua	/^		config = function()$/;"	f
 config_nvim	lua/functions.lua	/^function config_nvim()$/;"	f
