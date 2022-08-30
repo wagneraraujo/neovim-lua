@@ -1,9 +1,20 @@
+-- Lua
+--[[ require("github-theme").setup({
+  theme_style = "light_default",
+  -- other config
+}) ]]
 
-vim.cmd([[
-set bg=dark 
- set termguicolors
- colorscheme onedark
 
- let g:onedark_style = 'darker'
+require("github-theme").setup({
+  theme_style = "dark",
+  -- other config
+})
+--[[ require("github-theme").setup({
+  theme_style = "light_colorblind",
+  -- other config
+}) ]]
 
-]])
+--[[ require('onedark').setup {
+    style = 'darker'
+}
+require('onedark').load() ]]

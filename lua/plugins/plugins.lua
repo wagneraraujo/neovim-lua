@@ -9,6 +9,9 @@ return require("packer").startup(function()
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use({ "kelly-lin/telescope-ag", requires = { { "nvim-telescope/telescope.nvim" } } })
+
+
 
 	use("kyazdani42/nvim-web-devicons")
 	--use 'tamton-aquib/staline.nvim'
@@ -105,7 +108,6 @@ return require("packer").startup(function()
 	use("bluz71/vim-nightfly-guicolors")
 	use({ "turbio/bracey.vim", run = "cd app & npm install --prefix server" })
 
-	use({ "kelly-lin/telescope-ag", requires = { { "nvim-telescope/telescope.nvim" } } })
 	use("aca/emmet-ls")
 	use("mattn/emmet-vim")
 	use("kaiuri/nvim-juliana")
@@ -144,8 +146,19 @@ return require("packer").startup(function()
 	use("Valloric/MatchTagAlways")
 
 	--concif java
-	use 'mfussenegger/nvim-jdtls'
+	use { "mfussenegger/nvim-jdtls", ft = { "java" }}
+
 	use 'mfussenegger/nvim-dap'
 	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+-- Or with configuration
+use({
+  'projekt0n/github-nvim-theme',
+  config = function()
+    require('github-theme').setup({
+      -- ...
+    })
+  end
+})
+
 
 end)

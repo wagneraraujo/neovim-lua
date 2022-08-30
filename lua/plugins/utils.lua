@@ -93,10 +93,6 @@ require('lualine').setup {
 }
 -- vim.cmd[[colorscheme tokyonight]]
 -- vim.cmd [[colorscheme nightfly]]
-require('onedark').setup {
-    style = 'darker'
-}
-require('onedark').load()
 -- vim.g.catppuccin_flavour = "frappe"
 -- vim.cmd "colorscheme catppuccin"
 -- end themes config

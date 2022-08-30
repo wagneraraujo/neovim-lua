@@ -120,13 +120,10 @@ nnoremap <esc>^[ <esc>^[
 au! BufRead,BufNewFile *.block set filetype=html
 
 
-hi cursorline cterm=none term=none
+" hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-highlight CursorLine guibg=#303000 ctermbg=234
-hi CursorLine   cterm=NONE ctermbg=darkgray ctermfg=NONE "guibg=lightgrey guifg=white
 
-let g:lsc_server_commands = {'java': '/home/dev/.local/share/eclipse/java-language-server/dist/lang_server_linux.sh'}
 
 
 ]])
