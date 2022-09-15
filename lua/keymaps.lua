@@ -14,6 +14,9 @@ nnoremap <silent> <C-\> :NvimTreeToggle<CR>
 
 nnoremap <C-Right> :BufferLineCycleNext<CR>
 nnoremap <C-Left> :BufferLineCyclePrev<CR>
+nnoremap <A-Right> :BufferLineCycleNext<CR>
+nnoremap <A-Left> :BufferLineCyclePrev<CR>
+
 
 nnoremap <C-f> :Neoformat<CR>
 
