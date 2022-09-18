@@ -18,6 +18,7 @@ before	lua/plugins/configs/lsp-config/cmpconfiglua.lua	/^      before = function
 close_command	lua/plugins/configs/bufferline.lua	/^    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"$/;"	f
 config	lua/plugins/plugins.lua	/^		config = function()$/;"	f
 config_nvim	lua/functions.lua	/^function config_nvim()$/;"	f
+custom_colors	lua/plugins/plugins.lua	/^				custom_colors = function(c, s, cs)$/;"	f
 custom_filter	lua/plugins/configs/bufferline.lua	/^    custom_filter = function(buf_number, buf_numbers)$/;"	f
 diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^    diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f
 diagnostics_indicator	lua/plugins/configs/bufferline.lua	/^diagnostics_indicator = function(count, level, diagnostics_dict, context)$/;"	f
