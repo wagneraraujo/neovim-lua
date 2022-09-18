@@ -2,7 +2,7 @@ vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
-	use("terroo/vim-simple-emoji")
+	-- use("terroo/vim-simple-emoji")
 	use("navarasu/onedark.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -45,7 +45,7 @@ return require("packer").startup(function()
 	})
 
 	-- Navigation
-	use("justinmk/vim-sneak")
+	-- use("justinmk/vim-sneak")
 	use("akinsho/bufferline.nvim")
 	-- Dashboard
 	use({ "glepnir/dashboard-nvim" })
@@ -55,12 +55,13 @@ return require("packer").startup(function()
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 
+
 	use({
 		"nvim-lualine/lualine.nvim",
 	})
 
 	use("yamatsum/nvim-cursorline")
-	use("dense-analysis/ale")
+	-- use("dense-analysis/ale")
 
 	use("wakatime/vim-wakatime")
 	--config for react
@@ -143,9 +144,9 @@ return require("packer").startup(function()
 	use("Valloric/MatchTagAlways")
 
 	--concif java
-	use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
+	--[[ use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
 	use("mfussenegger/nvim-dap")
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) ]]
 	-- Or with configuration
 	use({
 		"projekt0n/github-nvim-theme",

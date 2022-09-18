@@ -40,6 +40,6 @@ root_dir	lua/plugins/configs/lsp-config/configlsp.lua	/^    root_dir = function(
 save_profiles	plugin/packer_compiled.lua	/^local function save_profiles(threshold)$/;"	f
 sort_by	lua/plugins/configs/bufferline.lua	/^    sort_by = 'insert_after_current', function(buffer_a, buffer_b)$/;"	f
 sumneko_lua	lua/plugins/lspneovim.lua	/^	sumneko_lua = function(opts)$/;"	f
-time	plugin/packer_compiled.lua	/^    time = function(chunk, start) end$/;"	f
-time	plugin/packer_compiled.lua	/^    time = function(chunk, start)$/;"	f
+time	plugin/packer_compiled.lua	/^  time = function(chunk, start) end$/;"	f
+time	plugin/packer_compiled.lua	/^  time = function(chunk, start)$/;"	f
 try_loadstring	plugin/packer_compiled.lua	/^local function try_loadstring(s, component, name)$/;"	f
