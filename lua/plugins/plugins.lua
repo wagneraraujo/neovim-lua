@@ -68,7 +68,13 @@ return require("packer").startup(function()
 	use("sbdchd/neoformat")
 	use("alvan/vim-closetag")
 	use("leafOfTree/vim-matchtag")
-	use("terrortylor/nvim-comment")
+	-- use("terrortylor/nvim-comment")
+	use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use({ "kristijanhusak/vim-js-file-import", run = "npm install" })
 
@@ -167,15 +173,15 @@ return require("packer").startup(function()
 				italic = true,
 
 				-- Italic styled comments
-				italic_comments = false,
+				italic_comments = true,
 
 				-- Minimal mode: different choice of colors for Tabs and StatusLine
-				minimal_mode = false,
+				minimal_mode = true,
 
 				-- Darker backgrounds for certain sidebars, popups, etc.
 				-- Options: true, false, or a table of explicit names
 				-- Supported: terminal, qf, vista_kind, packer, nvim-tree, telescope, whichkey
-				alternate_backgrounds = false,
+				alternate_backgrounds = true,
 
 				-- Callback function to define custom color groups
 				-- See 'lua/nordic/colors/example.lua' for example defitions

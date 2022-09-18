@@ -1,7 +1,8 @@
 -- Para nvim-web-devicons
 require'nvim-web-devicons'.get_icons()
 require'colorizer'.setup()
-require('nvim_comment').setup()
+-- require('nvim_comment').setup()
+require('Comment').setup()
 
 -- require('telescope').load_extension('ag')
 

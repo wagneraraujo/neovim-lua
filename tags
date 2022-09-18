@@ -17,6 +17,7 @@ _find_files	lua/functions.lua	/^function _find_files()$/;"	f
 before	lua/plugins/configs/lsp-config/cmpconfiglua.lua	/^      before = function (entry, vim_item)$/;"	f
 close_command	lua/plugins/configs/bufferline.lua	/^    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"$/;"	f
 config	lua/plugins/plugins.lua	/^		config = function()$/;"	f
+config	lua/plugins/plugins.lua	/^    config = function()$/;"	f
 config_nvim	lua/functions.lua	/^function config_nvim()$/;"	f
 custom_colors	lua/plugins/plugins.lua	/^				custom_colors = function(c, s, cs)$/;"	f
 custom_filter	lua/plugins/configs/bufferline.lua	/^    custom_filter = function(buf_number, buf_numbers)$/;"	f
