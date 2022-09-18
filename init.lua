@@ -9,7 +9,6 @@ _G.__luacache_config = {
 	},
 }
 require("impatient")
-require("impatient")
 require("basicneovim")
 require("functions")
 require("plugins.plugins")
