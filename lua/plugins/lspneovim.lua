@@ -1,15 +1,14 @@
-
-local luasnip = require "luasnip"
-local cmp = require "cmp"
-cmp.setup {
+local luasnip = require("luasnip")
+local cmp = require("cmp")
+cmp.setup({
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
 		end,
 	},
-	mapping = cmp.mapping.preset.insert {
+	mapping = cmp.mapping.preset.insert({
 		["<C-Space>"] = cmp.mapping.complete(),
-		["<CR>"] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Replace, select = true },
+		["<CR>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
@@ -24,9 +23,9 @@ cmp.setup {
 				fallback()
 			end
 		end, { "i", "s" }),
-	},
+	}),
 	sources = { { name = "nvim_lsp" }, { name = "luasnip" } },
-}
+})
 
 local servers = {
 	"bashls",
@@ -34,9 +33,10 @@ local servers = {
 	"html",
 	"tailwindcss",
 	"tsserver",
-	"java"
+	"java",
+	"javascriptreact",
 }
-local has_formatter = {  "html", "tsserver" }
+local has_formatter = { "html", "tsserver" }
 for _, name in pairs(servers) do
 	local found, server = require("nvim-lsp-installer").get_server(name)
 	if found and not server:is_installed() then

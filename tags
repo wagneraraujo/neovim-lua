@@ -18,6 +18,7 @@ before	lua/plugins/configs/lsp-config/cmpconfiglua.lua	/^      before = function
 close_command	lua/plugins/configs/bufferline.lua	/^    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"$/;"	f
 config	lua/plugins/plugins.lua	/^		config = function()$/;"	f
 config	lua/plugins/plugins.lua	/^    config = function()$/;"	f
+config	lua/plugins/plugins.lua	/^  config = function()$/;"	f
 config_nvim	lua/functions.lua	/^function config_nvim()$/;"	f
 custom_colors	lua/plugins/plugins.lua	/^				custom_colors = function(c, s, cs)$/;"	f
 custom_filter	lua/plugins/configs/bufferline.lua	/^    custom_filter = function(buf_number, buf_numbers)$/;"	f
@@ -30,7 +31,7 @@ expand	lua/plugins/tabnine.lua	/^    expand = function(args)$/;"	f
 format	lua/plugins/tabnine.lua	/^    format = function(entry, vim_item)$/;"	f
 get_extension	lua/tools.lua	/^function get_extension( var ) -- recebe o argumento para a variável$/;"	f
 has_any_words_before	lua/plugins/tabnine.lua	/^local has_any_words_before = function()$/;"	f
-keys	lua/plugins/utils.lua	/^    keys = "<Esc>", -- keys used for escaping, if it is a function will use the result everytime$/;"	f
+keys	lua/plugins/utils.lua	/^	keys = "<Esc>", -- keys used for escaping, if it is a function will use the result everytime$/;"	f
 left_mouse_command	lua/plugins/configs/bufferline.lua	/^    left_mouse_command = "buffer %d",    -- can be a string | function, see "Mouse actions"$/;"	f
 map	lua/plugins/configs/gitsigns.lua	/^    local function map(mode, l, r, opts)$/;"	f
 middle_mouse_command	lua/plugins/configs/bufferline.lua	/^    middle_mouse_command = nil,          -- can be a string | function, see "Mouse actions"$/;"	f

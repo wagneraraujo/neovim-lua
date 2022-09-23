@@ -42,12 +42,6 @@ set wildignore+=*node_modules/**
 
 let g:user_emmet_leader_key='<C-,>,'
 
-
-
-
-
-
-
 nnoremap <A-o> <Cmd>lua require'jdtls'.organize_imports()<CR>
 nnoremap crv <Cmd>lua require('jdtls').extract_variable()<CR>
 vnoremap crv <Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>

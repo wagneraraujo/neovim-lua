@@ -53,6 +53,7 @@ let g:mta_filetypes = {
     \ 'xml' : 1,
     \ 'jsx' : 1,
     \ 'tsx' : 1,
+    \ 'js' : 1,
     \ 'jinja' : 1,
     \}
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen

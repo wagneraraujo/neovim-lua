@@ -157,6 +157,7 @@ return require("packer").startup(function()
 			require("github-theme").setup({})
 		end,
 	})
+-- Lua
 
 	use({
 		"andersevenrud/nordic.nvim",
@@ -191,4 +192,14 @@ return require("packer").startup(function()
 			})
 		end,
 	})
+use { 
+  'olivercederborg/poimandres.nvim',
+  config = function()
+    require('poimandres').setup {
+      -- leave this setup function empty for default config
+      -- or refer to the configuration section
+      -- for configuration options
+    }
+  end
+}
 end)

@@ -14,7 +14,7 @@
   -- other config
 }) ]]
 
-require('onedark').setup {
+--[[ require('onedark').setup {
     style = 'darker'
 }
 require('onedark').load()
@@ -25,5 +25,6 @@ require('nordic').colorscheme({
     italic_comments = false,
     minimal_mode = false,
     alternate_backgrounds = false
-})
+}) ]]
 
+vim.cmd('colorscheme poimandres')
