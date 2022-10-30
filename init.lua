@@ -20,11 +20,7 @@ require("plugins.nvimtree")
 require("setthings")
 require("plugins.complete")
 require("plugins.configs.bufferline")
---[[ require("plugins.configs.lsp-config.cmpconfiglua")
-require("plugins.configs.lsp-config.configlsp") ]]
 require("plugins.configs.lsp-config.emmet-lsp")
---[[ require("plugins.configs.lsp-config.dap")
-require("plugins.configs.lsp-config.java") ]]
 require("plugins.configs.telescope")
 require("plugins.gitsigns")
 
@@ -32,6 +28,5 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 lsp.setup()
--- vim.cmd('colorscheme poimandres')
 
 
