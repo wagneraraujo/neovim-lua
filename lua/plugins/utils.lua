@@ -85,11 +85,6 @@ require("nvim-treesitter.configs").setup({
 		"json",
 		"vim",
 	},
-	highlight = {
-		enable = true,
-		disable = {},
-		additional_vim_regex_highlighting = false,
-	},
 	sync_install = false,
 	context_commentstring = {
 		enable = true,
@@ -159,6 +154,7 @@ require("better_escape").setup({
 	-- end,
 })
 
-require('ofirkai').setup {
-}
+require('ofirkai').setup {}
+
+require("toggleterm").setup{}
 

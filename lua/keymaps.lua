@@ -40,21 +40,17 @@ nmap <C-u> <Plug>(PromptJsFileImport)
 let g:js_file_import_use_telescope = 1
 set wildignore+=*node_modules/**
 
-let g:user_emmet_leader_key='<C-,>,'
+let g:user_emmet_leader_key='<,>,'
 
-nnoremap <A-o> <Cmd>lua require'jdtls'.organize_imports()<CR>
-nnoremap crv <Cmd>lua require('jdtls').extract_variable()<CR>
-vnoremap crv <Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>
-nnoremap crc <Cmd>lua require('jdtls').extract_constant()<CR>
-vnoremap crc <Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>
-vnoremap crm <Esc><Cmd>lua require('jdtls').extract_method(true)<CR>
+" set
+autocmd TermEnter term://*toggleterm#*
+      \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 
-
-nnoremap <leader>df <Cmd>lua require'jdtls'.test_class()<CR>
-nnoremap <leader>dn <Cmd>lua require'jdtls'.test_nearest_method()<CR>
-
-
-
+" By applying the mappings this way you can pass a count to your
+" mapping to open a specific window.
+" For example: 2<C-t> will open terminal 2
+nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
 
 ]])
 -- BASH - Auto preenche arquivos .sh que não existirem com a SheBang

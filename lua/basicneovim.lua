@@ -43,7 +43,7 @@ set ruler
 set nu!
 set number
 let no_buffers_menu=1
-set mousemodel=popup
+"set mousemodel=popup
 set guioptions=egmrti
 let g:CSApprox_loaded = 1
 set showmode
@@ -56,11 +56,10 @@ set modelines=10
 set title
 set titleold="Terminal"
 set titlestring=%F
-set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
-
+set mouse=
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
     set guifont=Menlo:h12
@@ -108,13 +107,13 @@ endif
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
+"if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+"  let g:coc_global_extensions += ['coc-prettier']
+"endif
 
-if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-  let g:coc_global_extensions += ['coc-eslint']
-endif
+"if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+"  let g:coc_global_extensions += ['coc-eslint']
+"endif
 " Visual mode
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
