@@ -1,13 +1,3 @@
-_G.__luacache_config = {
-	chunks = {
-		enable = true,
-		path = vim.fn.stdpath("cache") .. "/luacache_chunks",
-	},
-	modpaths = {
-		enable = true,
-		path = vim.fn.stdpath("cache") .. "/luacache_modpaths",
-	},
-}
 require("impatient")
 require("basicneovim")
 require("functions")
@@ -27,19 +17,6 @@ require("plugins.gitsigns")
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'sumneko_lua',
-	'sqls',
-	  'html',
-  'cssls',
-	'graphql',
-	'jsonls',
-	'prismals',
-	'tailwindcss'
-
-})
 lsp.setup()
 
 lsp.set_preferences({

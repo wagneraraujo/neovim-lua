@@ -4,12 +4,6 @@ require("colorizer").setup()
 -- require('nvim_comment').setup()
 require("Comment").setup()
 
--- require('telescope').load_extension('ag')
-
--- require("bufferline").setup{
---
--- }
-
 --identacao
 vim.opt.list = true
 
@@ -17,29 +11,10 @@ require("indent_blankline").setup({
 	show_end_of_line = true,
 })
 
--- OR setup with some options
-require("nvim-tree").setup({
-	sort_by = "case_sensitive",
-	view = {
-		adaptive_size = true,
-		mappings = {
-			list = {
-				{ key = "u", action = "dir_up" },
-			},
-		},
-	},
-	renderer = {
-		group_empty = true,
-	},
-	filters = {
-		dotfiles = true,
-	},
-})
-
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "poimandres",
+		theme = "auto",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {

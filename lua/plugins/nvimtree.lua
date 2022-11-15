@@ -5,7 +5,8 @@ require'nvim-tree'.setup {
   ignore_ft_on_setup  = {},
   open_on_tab         = false,
   hijack_cursor       = false,
-  update_cwd          = false,
+  update_cwd          = true,
+	   auto_close = true,
   diagnostics = {
     enable = false,
     icons = {
@@ -20,11 +21,6 @@ require'nvim-tree'.setup {
       quit_on_open = true,
     },
   },
-  update_focused_file = {
-    enable      = false,
-    update_cwd  = false,
-    ignore_list = {}
-  },
   system_open = {
     cmd  = nil,
     args = {}
@@ -32,12 +28,24 @@ require'nvim-tree'.setup {
 
   view = {
     width = 30,
-    height = 30,
-    side = 'left',
+    side = 'right',
     mappings = {
       custom_only = false,
       list = {}
     }
-  }
+  },
+	 auto_resize = true,
+	 signcolumn = "yes",
+	  git = {
+        enable = false
+    },
+		 update_focused_file = {
+        enable = true,
+        update_cwd = true
+    },
+		   filters = {
+        dotfiles = true,
+        custom = {"node_modules"}
+    },
 }
 
