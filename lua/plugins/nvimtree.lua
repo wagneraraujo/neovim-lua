@@ -6,7 +6,6 @@ require'nvim-tree'.setup {
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = true,
-	   auto_close = true,
   diagnostics = {
     enable = false,
     icons = {
