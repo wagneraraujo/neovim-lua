@@ -4,7 +4,7 @@ require("colorizer").setup()
 -- require('nvim_comment').setup()
 require("Comment").setup()
 require("mason-lspconfig").setup({
-	  automatic_installation = true,
+	automatic_installation = true,
 })
 --identacao
 vim.opt.list = true
@@ -156,7 +156,6 @@ require("better_escape").setup({
 	-- end,
 })
 
-require('ofirkai').setup {}
+require("ofirkai").setup({})
 
-require("toggleterm").setup{}
-
+require("toggleterm").setup({})

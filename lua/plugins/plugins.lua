@@ -7,7 +7,6 @@ vim.cmd([[
 ]])
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
-	-- use("terroo/vim-simple-emoji")
 	use("navarasu/onedark.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -17,7 +16,6 @@ return require("packer").startup(function(use)
 	use({ "kelly-lin/telescope-ag", requires = { { "nvim-telescope/telescope.nvim" } } })
 
 	use("kyazdani42/nvim-web-devicons")
-	--use 'tamton-aquib/staline.nvim'
 	use("lukas-reineke/indent-blankline.nvim")
 	use("norcalli/nvim-colorizer.lua")
 	use({
@@ -32,15 +30,8 @@ return require("packer").startup(function(use)
 			require("nvim-autopairs").setup({})
 		end,
 	})
-
-	--[[ use("neovim/nvim-lspconfig")
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-nvim-lsp") ]]
 	use("hrsh7th/cmp-buffer")
-	-- use("L3MON4D3/LuaSnip")
-	-- use("rafamadriz/friendly-snippets")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-
 	use("tpope/vim-fugitive")
 	use({
 		"lewis6991/gitsigns.nvim",
@@ -65,7 +56,7 @@ return require("packer").startup(function(use)
 	})
 
 	use("yamatsum/nvim-cursorline")
-	-- use("dense-analysis/ale")
+	use("dense-analysis/ale")
 
 	use("wakatime/vim-wakatime")
 	--config for react
