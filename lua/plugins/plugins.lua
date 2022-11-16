@@ -144,9 +144,9 @@ return require("packer").startup(function(use)
 	})
 	use("Valloric/MatchTagAlways")
 
-	use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
+	--[[ use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
 	use("mfussenegger/nvim-dap")
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) ]]
 	use({
 		"projekt0n/github-nvim-theme",
 		config = function()
@@ -158,4 +158,6 @@ use 'ofirgall/ofirkai.nvim'
 use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
 end}
+
+use {"chentoast/marks.nvim"}
 end)
