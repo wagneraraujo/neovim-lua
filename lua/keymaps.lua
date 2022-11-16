@@ -21,6 +21,8 @@ nnoremap <A-Left> :BufferLineCyclePrev<CR>
 nnoremap <C-f> :Neoformat<CR>
 
 let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+let g:ale_completion_autoimport = 0
 
 
 set tagfunc=jsfileimport#tagfunc
