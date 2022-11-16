@@ -3,7 +3,9 @@ require("nvim-web-devicons").get_icons()
 require("colorizer").setup()
 -- require('nvim_comment').setup()
 require("Comment").setup()
-
+require("mason-lspconfig").setup({
+	  automatic_installation = true,
+})
 --identacao
 vim.opt.list = true
 

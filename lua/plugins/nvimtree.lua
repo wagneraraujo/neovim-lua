@@ -33,8 +33,6 @@ require'nvim-tree'.setup {
       list = {}
     }
   },
-	 auto_resize = true,
-	 signcolumn = "yes",
 	  git = {
         enable = false
     },

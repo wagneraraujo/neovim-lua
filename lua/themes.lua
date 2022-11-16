@@ -9,9 +9,5 @@
   theme_style = "dark",
   -- other config
 }) ]]
---[[ require("github-theme").setup({
-  theme_style = "light_colorblind",
-  -- other config
-}) ]]
 
 

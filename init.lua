@@ -27,10 +27,8 @@ require("plugins.configs.telescope")
 require("plugins.gitsigns")
 
 local lsp = require("lsp-zero")
-
 lsp.preset("recommended")
 lsp.setup()
-
 lsp.set_preferences({
   suggest_lsp_servers = true,
   setup_servers_on_start = true,
