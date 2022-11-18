@@ -201,4 +201,21 @@ return require("packer").startup(function(use)
 		require('git-conflict').setup()
 	end }
 
+	use {
+		"abecodes/tabout.nvim",
+		opt = true,
+		wants = { "nvim-treesitter" },
+		after = { "nvim-cmp" },
+		config = function()
+			require("tabout").setup {
+				completion = false,
+				ignore_beginning = false,
+			}
+		end,
+	}
+
+
+	use { 'psliwka/vim-smoothie' }
+
+
 end)
