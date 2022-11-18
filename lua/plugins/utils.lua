@@ -160,38 +160,40 @@ require("ofirkai").setup({})
 
 require("toggleterm").setup({})
 
-require'marks'.setup {
-  mappings = {
-    set_next = "m,",
-    next = "m]",
-    preview = "m;",
-    set_bookmark0 = "m0",
-    prev = false -- pass false to disable only this default mapping
-  }
+require 'marks'.setup {
+	mappings = {
+		set_next = "m,",
+		next = "m]",
+		preview = "m;",
+		set_bookmark0 = "m0",
+		prev = false -- pass false to disable only this default mapping
+	}
 }
 
 local wilder = require('wilder')
-wilder.setup({modes = {':', '/', '?'}})
+wilder.setup({ modes = { ':', '/', '?' } })
 wilder.set_option('renderer', wilder.wildmenu_renderer({
-  -- highlighter applies highlighting to the candidates
-  highlighter = wilder.basic_highlighter(),
-	  pumblend = 20,
+	-- highlighter applies highlighting to the candidates
+	highlighter = wilder.basic_highlighter(),
+	pumblend = 20,
 }))
 wilder.set_option('renderer', wilder.renderer_mux({
-  [':'] = wilder.popupmenu_renderer({
-    highlighter = wilder.basic_highlighter(),
-  }),
-  ['/'] = wilder.wildmenu_renderer({
-    highlighter = wilder.basic_highlighter(),
-  }),
+	[':'] = wilder.popupmenu_renderer({
+		highlighter = wilder.basic_highlighter(),
+	}),
+	['/'] = wilder.wildmenu_renderer({
+		highlighter = wilder.basic_highlighter(),
+	}),
 }))
 wilder.set_option('renderer', wilder.popupmenu_renderer(
-  wilder.popupmenu_border_theme({
-    highlights = {
-      border = 'Normal', -- highlight to use for the border
-    },
-    -- 'single', 'double', 'rounded' or 'solid'
-    -- can also be a list of 8 characters, see :h wilder#popupmenu_border_theme() for more details
-    border = 'rounded',
-  })
+	wilder.popupmenu_border_theme({
+		highlights = {
+			border = 'Normal', -- highlight to use for the border
+		},
+		-- 'single', 'double', 'rounded' or 'solid'
+		-- can also be a list of 8 characters, see :h wilder#popupmenu_border_theme() for more details
+		border = 'rounded',
+	})
 ))
+
+

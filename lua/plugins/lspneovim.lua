@@ -33,7 +33,7 @@ local servers = {
 	"html",
 	"tailwindcss",
 	"tsserver",
-	"java",
+	"scss",
 	"javascriptreact",
 }
 local has_formatter = { "html", "tsserver" }

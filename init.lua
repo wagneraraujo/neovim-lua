@@ -25,8 +25,18 @@ require("plugins.configs.lsp-config.emmet-lsp")
 require("plugins.configs.telescope")
 require("plugins.gitsigns")
 require("plugins.trouble")
+require("plugins.gitconflict")
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
+lsp.ensure_installed({
+	"tsserver",
+	"sumneko_lua",
+	"cssls",
+})
+lsp.set_preferences({
+	suggest_lsp_servers = true,
+})
+
 lsp.setup()
 lsp.set_preferences({
 	suggest_lsp_servers = true,

@@ -1,4 +1,4 @@
-vim.cmd [[packadd packer.nvim]]
+vim.cmd([[packadd packer.nvim]])
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -65,24 +65,23 @@ return require("packer").startup(function(use)
 	use("alvan/vim-closetag")
 	use("leafOfTree/vim-matchtag")
 	-- use("terrortylor/nvim-comment")
-	use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-}
-	use("JoosepAlviste/nvim-ts-context-commentstring")
-	use({ "kristijanhusak/vim-js-file-import", run = "npm install" })
-
 	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+	-- use({ "kristijanhusak/vim-js-file-import", run = "npm install" })
+
+	--[[ use({
 		"anuvyklack/pretty-fold.nvim",
 		config = function()
 			require("pretty-fold").setup()
 		end,
-	})
+	}) ]]
 
 	use("windwp/nvim-ts-autotag")
-	use("marko-cerovac/material.nvim")
 
 	use("ludovicchabant/vim-gutentags")
 	--close buffer  security
@@ -100,13 +99,11 @@ return require("packer").startup(function(use)
 	use("mg979/vim-visual-multi")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
-	use("b3nj5m1n/kommentary")
+	-- use("b3nj5m1n/kommentary")
 	use("andweeb/presence.nvim")
 	use("WhoIsSethDaniel/toggle-lsp-diagnostics.nvim")
 
 	--live server
-	use("bluz71/vim-nightfly-guicolors")
-	use({ "turbio/bracey.vim", run = "cd app & npm install --prefix server" })
 
 	use("aca/emmet-ls")
 	use("mattn/emmet-vim")
@@ -153,29 +150,55 @@ return require("packer").startup(function(use)
 			require("github-theme").setup({})
 		end,
 	})
--- Lua
-use 'ofirgall/ofirkai.nvim'
-use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-  require("toggleterm").setup()
-end}
+	-- Lua
+	use("ofirgall/ofirkai.nvim")
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 
-use {"chentoast/marks.nvim"}
+	use({ "chentoast/marks.nvim" })
 
--- Lua
-use {
-  "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
-}
+	-- Lua
+	use({
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 
-use {
-  'gelguy/wilder.nvim',
-}
+	use({
+		"gelguy/wilder.nvim",
+	})
+
+	use({
+		"ray-x/navigator.lua",
+		requires = {
+			{ "ray-x/guihua.lua", run = "cd lua/fzy && make" },
+			{ "neovim/nvim-lspconfig" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+		config = function()
+			require("navigator").setup({
+				mason = true,
+				lsp = {
+					tsserver = { cmd = { "your tsserver installed by lsp_installer or mason" } },
+					-- e.g. tsserver = { cmd = {'/home/username/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver'} }
+				},
+			})
+		end,
+	})
+
+	use { 'akinsho/git-conflict.nvim', tag = "*", config = function()
+		require('git-conflict').setup()
+	end }
 
 end)
