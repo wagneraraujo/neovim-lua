@@ -9,7 +9,7 @@ _G.__luacache_config = {
 	},
 }
 
-require("impatient")
+require("plugins.impatient")
 require("basicneovim")
 require("functions")
 require("plugins.plugins")
@@ -27,6 +27,7 @@ require("plugins.gitsigns")
 require("plugins.trouble")
 require("plugins.gitconflict")
 require("plugins.autopairs")
+require("plugins.indentline")
 
 -- lsp config
 require("plugins.configs.lsp-config.configlsp")
@@ -60,6 +61,6 @@ require("plugins.configs.lsp-config.lspkind")
 -- 		hint = "⚑",
 -- 		info = "",
 -- 	},
+
 -- })
---
 --
