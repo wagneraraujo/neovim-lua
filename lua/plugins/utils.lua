@@ -154,10 +154,7 @@ require("nvim-treesitter.configs").setup({
 	autotag = {
 		enable = true,
 	},
-	indent = {
-		enable = true,
-		disable = {},
-	},
+	indent = { enable = true, disable = { "python", "css" } },
 
 	refactor = {
 		smart_rename = {
