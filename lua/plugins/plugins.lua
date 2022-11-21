@@ -118,31 +118,39 @@ return require("packer").startup(function(use)
 	})
 
 	-- LSP
-	use({
-		"VonHeikemen/lsp-zero.nvim",
-		requires = {
-			-- LSP Support
-			{ "neovim/nvim-lspconfig" },
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
-
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-
-			-- Snippets
-			{ "L3MON4D3/LuaSnip" },
-			{ "rafamadriz/friendly-snippets" },
-		},
-	})
+	-- use({
+	-- 	"VonHeikemen/lsp-zero.nvim",
+	-- 	requires = {
+	-- 		-- LSP Support
+	-- 		{ "neovim/nvim-lspconfig" },
+	-- 		{ "williamboman/mason.nvim" },
+	-- 		{ "williamboman/mason-lspconfig.nvim" },
+	--
+	-- 		-- Autocompletion
+	-- 		{ "hrsh7th/nvim-cmp" },
+	-- 		{ "hrsh7th/cmp-buffer" },
+	-- 		{ "hrsh7th/cmp-path" },
+	-- 		{ "saadparwaiz1/cmp_luasnip" },
+	-- 		{ "hrsh7th/cmp-nvim-lsp" },
+	-- 		{ "hrsh7th/cmp-nvim-lua" },
+	--
+	-- 		-- Snippets
+	-- 		{ "L3MON4D3/LuaSnip" },
+	-- 		{ "rafamadriz/friendly-snippets" },
+	-- 	},
+	-- })
 	use 'onsails/lspkind-nvim'
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'williamboman/mason-lspconfig.nvim'
 
+	use { "neovim/nvim-lspconfig" }
+	use { "hrsh7th/nvim-cmp" }
+	use { "hrsh7th/cmp-path" }
+	use { "saadparwaiz1/cmp_luasnip" }
+	use { "hrsh7th/cmp-nvim-lsp" }
+	use { "hrsh7th/cmp-nvim-lua" }
+	use { "L3MON4D3/LuaSnip" }
+	use { "rafamadriz/friendly-snippets" }
 
 	use("Valloric/MatchTagAlways")
 
@@ -195,7 +203,7 @@ return require("packer").startup(function(use)
 			require("navigator").setup({
 				mason = true,
 				lsp = {
-					tsserver = { cmd = { "your tsserver installed by lsp_installer or mason" } },
+					tsserver = { cmd = { '/home/dev/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver' } },
 					-- e.g. tsserver = { cmd = {'/home/username/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver'} }
 				},
 			})

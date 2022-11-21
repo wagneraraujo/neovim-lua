@@ -3,6 +3,15 @@ require("nvim-web-devicons").get_icons()
 require("colorizer").setup()
 -- require('nvim_comment').setup()
 require("Comment").setup()
+require("mason").setup({
+	ui = {
+		icons = {
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
+		},
+	},
+})
 require("mason-lspconfig").setup({
 	automatic_installation = true,
 })
@@ -25,7 +34,6 @@ local diff = {
 	"diff",
 	colored = false,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-	cond = hide_in_width
 }
 
 local mode = {
@@ -185,15 +193,6 @@ require("presence"):setup({
 	debounce_timeout = 10,
 })
 
-require("mason").setup({
-	ui = {
-		icons = {
-			package_installed = "✓",
-			package_pending = "➜",
-			package_uninstalled = "✗",
-		},
-	},
-})
 
 -- lua, default settings
 require("better_escape").setup({
