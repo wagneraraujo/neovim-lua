@@ -26,30 +26,40 @@ require("plugins.configs.telescope")
 require("plugins.gitsigns")
 require("plugins.trouble")
 require("plugins.gitconflict")
-local lsp = require("lsp-zero")
-lsp.preset("recommended")
-lsp.ensure_installed({
-	"tsserver",
-	"sumneko_lua",
-	"cssls",
-})
-lsp.set_preferences({
-	suggest_lsp_servers = true,
-})
+require("plugins.autopairs")
 
-lsp.setup()
-lsp.set_preferences({
-	suggest_lsp_servers = true,
-	setup_servers_on_start = true,
-	set_lsp_keymaps = true,
-	configure_diagnostics = true,
-	cmp_capabilities = true,
-	manage_nvim_cmp = true,
-	call_servers = "local",
-	sign_icons = {
-		error = "✘",
-		warn = "▲",
-		hint = "⚑",
-		info = "",
-	},
-})
+-- lsp config
+require("plugins.configs.lsp-config.configlsp")
+require("plugins.configs.lsp-config.lspsaga")
+require("plugins.configs.lsp-config.null")
+require("plugins.configs.lsp-config.cmpconfiglua")
+require("plugins.configs.lsp-config.lspkind")
+-- local lsp = require("lsp-zero")
+-- lsp.preset("recommended")
+-- lsp.ensure_installed({
+-- 	"tsserver",
+-- 	"sumneko_lua",
+-- 	"cssls",
+-- })
+-- lsp.set_preferences({
+-- 	suggest_lsp_servers = true,
+-- })
+--
+-- lsp.setup()
+-- lsp.set_preferences({
+-- 	suggest_lsp_servers = true,
+-- 	setup_servers_on_start = true,
+-- 	set_lsp_keymaps = true,
+-- 	configure_diagnostics = true,
+-- 	cmp_capabilities = true,
+-- 	manage_nvim_cmp = true,
+-- 	call_servers = "local",
+-- 	sign_icons = {
+-- 		error = "✘",
+-- 		warn = "▲",
+-- 		hint = "⚑",
+-- 		info = "",
+-- 	},
+-- })
+--
+--

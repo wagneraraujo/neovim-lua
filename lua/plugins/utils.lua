@@ -79,9 +79,11 @@ require("nvim-treesitter.configs").setup({
 		"typescript",
 		"regex",
 		"css",
+		"tsx",
 		"javascript",
 		"html",
 		"comment",
+		"php",
 		"rust",
 		"markdown",
 		"json",
@@ -100,10 +102,13 @@ require("nvim-treesitter.configs").setup({
 	},
 	autopairs = { enable = true },
 	incremental_selection = { enable = true },
-	indent = { enable = false },
 
 	autotag = {
 		enable = true,
+	},
+	indent = {
+		enable = true,
+		disable = {},
 	},
 
 	refactor = {
@@ -125,7 +130,8 @@ require("nvim-treesitter.configs").setup({
 		},
 	},
 })
-
+local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
 -- include presence and its config
 require("presence"):setup({
 	enable_line_number = false,
@@ -160,40 +166,51 @@ require("ofirkai").setup({})
 
 require("toggleterm").setup({})
 
-require 'marks'.setup {
+require("marks").setup({
 	mappings = {
 		set_next = "m,",
 		next = "m]",
 		preview = "m;",
 		set_bookmark0 = "m0",
-		prev = false -- pass false to disable only this default mapping
-	}
-}
+		prev = false, -- pass false to disable only this default mapping
+	},
+})
 
-local wilder = require('wilder')
-wilder.setup({ modes = { ':', '/', '?' } })
-wilder.set_option('renderer', wilder.wildmenu_renderer({
-	-- highlighter applies highlighting to the candidates
-	highlighter = wilder.basic_highlighter(),
-	pumblend = 20,
-}))
-wilder.set_option('renderer', wilder.renderer_mux({
-	[':'] = wilder.popupmenu_renderer({
+local wilder = require("wilder")
+wilder.setup({ modes = { ":", "/", "?" } })
+wilder.set_option(
+	"renderer",
+	wilder.wildmenu_renderer({
+		-- highlighter applies highlighting to the candidates
 		highlighter = wilder.basic_highlighter(),
-	}),
-	['/'] = wilder.wildmenu_renderer({
-		highlighter = wilder.basic_highlighter(),
-	}),
-}))
-wilder.set_option('renderer', wilder.popupmenu_renderer(
-	wilder.popupmenu_border_theme({
+		pumblend = 20,
+	})
+)
+wilder.set_option(
+	"renderer",
+	wilder.renderer_mux({
+		[":"] = wilder.popupmenu_renderer({
+			highlighter = wilder.basic_highlighter(),
+		}),
+		["/"] = wilder.wildmenu_renderer({
+			highlighter = wilder.basic_highlighter(),
+		}),
+	})
+)
+wilder.set_option(
+	"renderer",
+	wilder.popupmenu_renderer(wilder.popupmenu_border_theme({
 		highlights = {
-			border = 'Normal', -- highlight to use for the border
+			border = "Normal", -- highlight to use for the border
 		},
 		-- 'single', 'double', 'rounded' or 'solid'
 		-- can also be a list of 8 characters, see :h wilder#popupmenu_border_theme() for more details
-		border = 'rounded',
-	})
-))
+		border = "rounded",
+	}))
+)
 
-
+require("nvim-treesitter.configs").setup({
+	autotag = {
+		enable = true,
+	},
+})

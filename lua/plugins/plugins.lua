@@ -139,6 +139,11 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+	use 'onsails/lspkind-nvim'
+	use 'jose-elias-alvarez/null-ls.nvim'
+	use 'williamboman/mason-lspconfig.nvim'
+
+
 	use("Valloric/MatchTagAlways")
 
 	--[[ use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
@@ -197,25 +202,34 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use { 'akinsho/git-conflict.nvim', tag = "*", config = function()
-		require('git-conflict').setup()
-	end }
+	use({
+		"akinsho/git-conflict.nvim",
+		tag = "*",
+		config = function()
+			require("git-conflict").setup()
+		end,
+	})
 
-	use {
+	use({
 		"abecodes/tabout.nvim",
 		opt = true,
 		wants = { "nvim-treesitter" },
 		after = { "nvim-cmp" },
 		config = function()
-			require("tabout").setup {
+			require("tabout").setup({
 				completion = false,
 				ignore_beginning = false,
-			}
+			})
 		end,
-	}
+	})
 
+	use({ "psliwka/vim-smoothie" })
+	-- use({
+	-- 	"melkster/modicator.nvim",
+	-- 	after = "onedark.nvim", -- Add your colorscheme plugin here
+	-- 	config = function()
+	-- 	end,
+	-- })
 
-	use { 'psliwka/vim-smoothie' }
-
-
+	use { 'xiyaowong/nvim-cursorword' }
 end)
