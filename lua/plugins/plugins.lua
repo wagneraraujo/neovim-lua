@@ -157,12 +157,12 @@ return require("packer").startup(function(use)
 	--[[ use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
 	use("mfussenegger/nvim-dap")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) ]]
-	use({
-		"projekt0n/github-nvim-theme",
-		config = function()
-			require("github-theme").setup({})
-		end,
-	})
+	-- use({
+	-- 	"projekt0n/github-nvim-theme",
+	-- 	config = function()
+	-- 		require("github-theme").setup({})
+	-- 	end,
+	-- })
 	-- Lua
 	use("ofirgall/ofirkai.nvim")
 	use({
@@ -203,7 +203,7 @@ return require("packer").startup(function(use)
 			require("navigator").setup({
 				mason = true,
 				lsp = {
-					tsserver = { cmd = { '/home/dev/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver' } },
+					tsserver = { cmd = { '~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver' } },
 					-- e.g. tsserver = { cmd = {'/home/username/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver'} }
 				},
 			})
@@ -218,19 +218,34 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use({
-		"abecodes/tabout.nvim",
-		opt = true,
-		wants = { "nvim-treesitter" },
-		after = { "nvim-cmp" },
+	-- Lua
+	use {
+		'abecodes/tabout.nvim',
 		config = function()
-			require("tabout").setup({
-				completion = false,
-				ignore_beginning = false,
-			})
+			require('tabout').setup {
+				tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
+				backwards_tabkey = '<S-Tab>', -- key to trigger backwards tabout, set to an empty string to disable
+				act_as_tab = true, -- shift content if tab out is not possible
+				act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
+				default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
+				default_shift_tab = '<C-d>', -- reverse shift default action,
+				enable_backwards = true, -- well ...
+				completion = true, -- if the tabkey is used in a completion pum
+				tabouts = {
+					{ open = "'", close = "'" },
+					{ open = '"', close = '"' },
+					{ open = '`', close = '`' },
+					{ open = '(', close = ')' },
+					{ open = '[', close = ']' },
+					{ open = '{', close = '}' }
+				},
+				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
+				exclude = {} -- tabout will ignore these filetypes
+			}
 		end,
-	})
-
+		wants = { 'nvim-treesitter' }, -- or require if not used so far
+		after = { 'nvim-cmp' } -- if a completion plugin is using tabs load it before
+	}
 	use({ "psliwka/vim-smoothie" })
 	-- use({
 	-- 	"melkster/modicator.nvim",
@@ -240,4 +255,38 @@ return require("packer").startup(function(use)
 	-- })
 
 	use { 'xiyaowong/nvim-cursorword' }
+
+	use {
+		'andersevenrud/nordic.nvim',
+		config = function()
+			-- The table used in this example contains the default settings.
+			-- Modify or remove these to your liking (this also applies to alternatives below):
+			require('nordic').colorscheme({
+				-- Underline style used for spelling
+				-- Options: 'none', 'underline', 'undercurl'
+				underline_option = 'none',
+
+				-- Italics for certain keywords such as constructors, functions,
+				-- labels and namespaces
+				italic = true,
+
+				-- Italic styled comments
+				italic_comments = false,
+
+				-- Minimal mode: different choice of colors for Tabs and StatusLine
+				minimal_mode = false,
+
+				-- Darker backgrounds for certain sidebars, popups, etc.
+				-- Options: true, false, or a table of explicit names
+				-- Supported: terminal, qf, vista_kind, packer, nvim-tree, telescope, whichkey
+				alternate_backgrounds = false,
+
+				-- Callback function to define custom color groups
+				-- See 'lua/nordic/colors/example.lua' for example defitions
+				custom_colors = function(c, s, cs)
+					return {}
+				end
+			})
+		end
+	}
 end)

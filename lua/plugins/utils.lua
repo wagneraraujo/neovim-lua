@@ -3,18 +3,6 @@ require("nvim-web-devicons").get_icons()
 require("colorizer").setup()
 -- require('nvim_comment').setup()
 require("Comment").setup()
-require("mason").setup({
-	ui = {
-		icons = {
-			package_installed = "✓",
-			package_pending = "➜",
-			package_uninstalled = "✗",
-		},
-	},
-})
-require("mason-lspconfig").setup({
-	automatic_installation = true,
-})
 --identacao
 vim.opt.list = true
 
@@ -206,7 +194,7 @@ require("better_escape").setup({
 	-- end,
 })
 
-require("ofirkai").setup({})
+-- require("ofirkai").setup({})
 
 require("toggleterm").setup({})
 
@@ -257,4 +245,12 @@ require("nvim-treesitter.configs").setup({
 	autotag = {
 		enable = true,
 	},
+})
+
+require('nordic').colorscheme({
+	underline_option = 'none',
+	italic = true,
+	italic_comments = false,
+	minimal_mode = false,
+	alternate_backgrounds = false
 })
