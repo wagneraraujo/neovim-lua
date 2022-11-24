@@ -134,7 +134,6 @@ return require("packer").startup(function(use)
 	use("folke/tokyonight.nvim")
 	use("maxmellon/vim-jsx-pretty")
 
-	use("karb94/neoscroll.nvim")
 	use("p00f/nvim-ts-rainbow")
 
 	use("mg979/vim-visual-multi")
@@ -180,18 +179,18 @@ return require("packer").startup(function(use)
 	-- 		{ "rafamadriz/friendly-snippets" },
 	-- 	},
 	-- })
-	use 'onsails/lspkind-nvim'
-	use 'jose-elias-alvarez/null-ls.nvim'
-	use 'williamboman/mason-lspconfig.nvim'
+	use("onsails/lspkind-nvim")
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 
-	use { "neovim/nvim-lspconfig" }
-	use { "hrsh7th/nvim-cmp" }
-	use { "hrsh7th/cmp-path" }
-	use { "saadparwaiz1/cmp_luasnip" }
-	use { "hrsh7th/cmp-nvim-lsp" }
-	use { "hrsh7th/cmp-nvim-lua" }
-	use { "L3MON4D3/LuaSnip" }
-	use { "rafamadriz/friendly-snippets" }
+	use({ "neovim/nvim-lspconfig" })
+	use({ "hrsh7th/nvim-cmp" })
+	use({ "hrsh7th/cmp-path" })
+	use({ "saadparwaiz1/cmp_luasnip" })
+	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-nvim-lua" })
+	use({ "L3MON4D3/LuaSnip" })
+	use({ "rafamadriz/friendly-snippets" })
 
 	use("Valloric/MatchTagAlways")
 
@@ -244,7 +243,11 @@ return require("packer").startup(function(use)
 			require("navigator").setup({
 				mason = true,
 				lsp = {
-					tsserver = { cmd = { '~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver' } },
+					tsserver = {
+						cmd = {
+							"~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver",
+						},
+					},
 					-- e.g. tsserver = { cmd = {'/home/username/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver'} }
 				},
 			})
@@ -260,34 +263,34 @@ return require("packer").startup(function(use)
 	})
 
 	-- Lua
-	use {
-		'abecodes/tabout.nvim',
+	use({
+		"abecodes/tabout.nvim",
 		config = function()
-			require('tabout').setup {
-				tabkey = '<Tab>', -- key to trigger tabout, set to an empty string to disable
-				backwards_tabkey = '<S-Tab>', -- key to trigger backwards tabout, set to an empty string to disable
+			require("tabout").setup({
+				tabkey = "<Tab>", -- key to trigger tabout, set to an empty string to disable
+				backwards_tabkey = "<S-Tab>", -- key to trigger backwards tabout, set to an empty string to disable
 				act_as_tab = true, -- shift content if tab out is not possible
 				act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
-				default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
-				default_shift_tab = '<C-d>', -- reverse shift default action,
+				default_tab = "<C-t>", -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
+				default_shift_tab = "<C-d>", -- reverse shift default action,
 				enable_backwards = true, -- well ...
 				completion = true, -- if the tabkey is used in a completion pum
 				tabouts = {
 					{ open = "'", close = "'" },
 					{ open = '"', close = '"' },
-					{ open = '`', close = '`' },
-					{ open = '(', close = ')' },
-					{ open = '[', close = ']' },
-					{ open = '{', close = '}' }
+					{ open = "`", close = "`" },
+					{ open = "(", close = ")" },
+					{ open = "[", close = "]" },
+					{ open = "{", close = "}" },
 				},
 				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-				exclude = {} -- tabout will ignore these filetypes
-			}
+				exclude = {}, -- tabout will ignore these filetypes
+			})
 		end,
-		wants = { 'nvim-treesitter' }, -- or require if not used so far
-		after = { 'nvim-cmp' } -- if a completion plugin is using tabs load it before
-	}
-	use({ "psliwka/vim-smoothie" })
+		wants = { "nvim-treesitter" }, -- or require if not used so far
+		after = { "nvim-cmp" }, -- if a completion plugin is using tabs load it before
+	})
+	use 'karb94/neoscroll.nvim'
 	-- use({
 	-- 	"melkster/modicator.nvim",
 	-- 	after = "onedark.nvim", -- Add your colorscheme plugin here
@@ -295,9 +298,12 @@ return require("packer").startup(function(use)
 	-- 	end,
 	-- })
 
-	use { 'xiyaowong/nvim-cursorword' }
-	use 'sam4llis/nvim-tundra' -- packer.nvim
-	use { 'gzagatti/vim-leuven-theme' }
-
-
+	use({ "xiyaowong/nvim-cursorword" })
+	use("sam4llis/nvim-tundra") -- packer.nvim
+	use({ "gzagatti/vim-leuven-theme" })
+	local async = require("plenary.async")
+	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+	use { "ellisonleao/gruvbox.nvim" }
+	use "lukas-reineke/cmp-under-comparator"
+	use { 'tveskag/nvim-blame-line' }
 end)

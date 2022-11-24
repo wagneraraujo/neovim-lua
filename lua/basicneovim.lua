@@ -58,7 +58,7 @@ set titleold="Terminal"
 set titlestring=%F
 set t_Co=256
 set guioptions=egmrti
-set gfn=Monospace\ 10
+set gfn='FiraCode'\ 11
 set mouse=
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
@@ -132,12 +132,12 @@ autocmd WinLeave * setlocal nocursorline
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-
+autocmd BufEnter * EnableBlameLine
 ]])
 
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.winblend = 0
-vim.opt.wildoptions = 'pum'
+vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 5
-vim.opt.background = 'dark'
+vim.opt.background = "dark"
