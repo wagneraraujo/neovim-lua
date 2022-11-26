@@ -133,11 +133,45 @@ autocmd WinLeave * setlocal nocursorline
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 autocmd BufEnter * EnableBlameLine
+nnoremap <Leader>if <Plug>(JsFileImport)
+
+nnoremap <Leader>iF <Plug>(JsFileImportList)
+
+nnoremap <Leader>ig <Plug>(JsGotoDefinition)
+
+nnoremap <Leader>iG <Plug>(JsGotoDefinition)
+
+nnoremap <Leader>ip <Plug>(PromptJsFileImport)
+
+nnoremap <Leader>is <Plug>(SortJsFileImport)
+
+nnoremap <Leader>ic <Plug>(JsFixImport)
+
 ]])
 
-vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 5
 vim.opt.background = "dark"
+vim.cmd("colorscheme gruvbox")
+vim.api.nvim_create_user_command("FixWhitespace", [[%s/\s\+$//e]], {})
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- treesiter
+vim.opt.writebackup = false
+vim.opt.termguicolors = true
+vim.opt.conceallevel = 2
+vim.opt.ignorecase = true -- search case
+vim.opt.smartcase = true -- search matters if capital letter
+vim.opt.inccommand = "split" -- "for incsearch while sub
+vim.opt.lazyredraw = true -- redraw for macros
+vim.opt.termguicolors = true -- true colors term support
+vim.opt.undofile = true -- undo even when it closes
+vim.opt.scrolloff = 8 -- number of lines to always go down
+vim.opt.signcolumn = "number"
+vim.opt.colorcolumn = "99999" -- fix columns
+vim.opt.splitbelow = true -- split windows below
+vim.opt.splitright = true -- split windows right
+vim.opt.wildmode = "list:longest,list:full" -- for : stuff
+vim.opt.wildignore:append({ ".javac", "node_modules", "*.pyc" })
+vim.opt.suffixesadd:append({ ".java", ".rs" }) -- search for suffexes using gf
+vim.opt.diffopt:append { "internal,algorithm:patience" }

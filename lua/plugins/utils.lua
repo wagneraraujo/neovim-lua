@@ -2,10 +2,14 @@
 require("nvim-web-devicons").get_icons()
 require("colorizer").setup()
 -- require('nvim_comment').setup()
-require("Comment").setup()
+require("Comment").setup({
+	pre_hook = function()
+		return require("ts_context_commentstring.internal").calculate_commentstring()
+	end,
+})
+
 --identacao
 vim.opt.list = true
-
 
 --lua line confsg
 local diagnostics = {
@@ -137,6 +141,15 @@ require("nvim-treesitter.configs").setup({
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
+		config = {
+			javascript = {
+				__default = "// %s",
+				jsx_element = "{/* %s */}",
+				jsx_fragment = "{/* %s */}",
+				jsx_attribute = "// %s",
+				comment = "// %s",
+			},
+		},
 	},
 	rainbow = {
 		enable = true,
@@ -150,7 +163,7 @@ require("nvim-treesitter.configs").setup({
 	autotag = {
 		enable = true,
 	},
-	indent = { enable = true, disable = { "python", "css" } },
+	indent = { enable = true, disable = { "python" } },
 
 	refactor = {
 		smart_rename = {
@@ -180,7 +193,6 @@ require("presence"):setup({
 	neovim_image_text = "Its Neovim buddy!!!",
 	debounce_timeout = 10,
 })
-
 
 -- lua, default settings
 require("better_escape").setup({
@@ -241,17 +253,49 @@ wilder.set_option(
 	}))
 )
 
-require("nvim-treesitter.configs").setup({
-	autotag = {
-		enable = true,
-	},
+-- require("nvim-treesitter.configs").setup({
+-- 	autotag = {
+-- 		enable = true,
+-- 	},
+-- })
+
+require("gruvbox").setup({
+	overrides = {
+		Define = { link = "GruvboxPurple" },
+		Macro = { link = "GruvboxPurple" },
+		TSNote = { link = "GruvboxYellow" },
+		TSConstBuiltin = { link = "GruvboxPurple" },
+		CocCodeLens = { fg = "#878787" },
+		ContextVt = { fg = "#878787" },
+		Comment = { fg = "#fe8019", italic = true },
+		Folded = { italic = true, fg = "#fe8019", bg = "#3c3836" },
+		FoldColumn = { fg = "#fe8019", bg = "#0E1018" },
+		DiffDelete = {
+			bold = true,
+			reverse = false,
+			fg = "#442d30",
+			bg = "#442d30"
+		},
+		DiffText = { bold = true, reverse = false, fg = "", bg = "#213352" },
+		StatusLine = { bg = "#ffffff", fg = "#0E1018" },
+		StatusLineNC = { bg = "#3c3836", fg = "#0E1018" },
+		CursorLineNr = { fg = "#fabd2f", bg = "#0E1018" },
+		CocWarningFloat = { fg = "#dfaf87" },
+		CocInlayHint = { fg = "#87afaf" },
+		DiagnosticVirtualTextWarn = { fg = "#dfaf87" },
+		GruvboxOrangeSign = { fg = "#dfaf87", bg = "#0E1018" },
+		GruvboxAquaSign = { fg = "#8EC07C", bg = "#0E1018" },
+		GruvboxGreenSign = { fg = "#b8bb26", bg = "#0E1018" },
+		GruvboxRedSign = { fg = "#fb4934", bg = "#0E1018" },
+		GruvboxBlueSign = { fg = "#83a598", bg = "#0E1018" },
+		WilderMenu = { fg = "#ebdbb2", bg = "#0E1018" },
+		WilderAccent = { fg = "#f4468f", bg = "#0E1018" }
+	}
 })
 
-vim.cmd('colorscheme tundra')
-require('neoscroll').setup({
+require("neoscroll").setup({
 	-- All these keys will be mapped to their corresponding default scrolling animation
-	mappings = { '<C-u>', '<C-d>', '<C-b>',
-		'<C-y>', '<C-e>', 'zt', 'zz', 'zb' },
+	mappings = { "<C-u>", "<C-d>", "<C-b>", "<C-y>", "<C-e>", "zt", "zz", "zb" },
 	hide_cursor = true, -- Hide cursor while scrolling
 	stop_eof = true, -- Stop at <EOF> when scrolling downwards
 	respect_scrolloff = false, -- Stop scrolling when the cursor reaches the scrolloff margin of the file
@@ -260,4 +304,11 @@ require('neoscroll').setup({
 	pre_hook = nil, -- Function to run before the scrolling animation starts
 	post_hook = nil, -- Function to run after the scrolling animation ends
 	performance_mode = false, -- Disable "Performance Mode" on all buffers.
+})
+
+require('nvim-autopairs').setup({
+	disable_filetype = { "TelescopePrompt" },
+	map_cr = false,
+	disable_in_macro = false,
+	disable_in_visualblock = false
 })

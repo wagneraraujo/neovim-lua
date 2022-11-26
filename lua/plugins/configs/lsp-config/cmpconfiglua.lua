@@ -126,7 +126,9 @@ cmp.setup({
 		{ name = "npm" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
+		{ name = "tsserver" },
 		{ name = "path" },
+		{ name = "cmp_tabnine" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,

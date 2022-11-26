@@ -290,7 +290,7 @@ return require("packer").startup(function(use)
 		wants = { "nvim-treesitter" }, -- or require if not used so far
 		after = { "nvim-cmp" }, -- if a completion plugin is using tabs load it before
 	})
-	use 'karb94/neoscroll.nvim'
+	use("karb94/neoscroll.nvim")
 	-- use({
 	-- 	"melkster/modicator.nvim",
 	-- 	after = "onedark.nvim", -- Add your colorscheme plugin here
@@ -303,7 +303,9 @@ return require("packer").startup(function(use)
 	use({ "gzagatti/vim-leuven-theme" })
 	local async = require("plenary.async")
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
-	use { "ellisonleao/gruvbox.nvim" }
-	use "lukas-reineke/cmp-under-comparator"
-	use { 'tveskag/nvim-blame-line' }
+	use({ "ellisonleao/gruvbox.nvim" })
+	use("lukas-reineke/cmp-under-comparator")
+	use({ "tveskag/nvim-blame-line" })
+	use({ "kristijanhusak/vim-js-file-import", run = "npm install" })
+	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 end)
