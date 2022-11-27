@@ -257,13 +257,6 @@ return require("packer").startup(function(use)
 		after = { "nvim-cmp" }, -- if a completion plugin is using tabs load it before
 	})
 	use("karb94/neoscroll.nvim")
-	-- use({
-	-- 	"melkster/modicator.nvim",
-	-- 	after = "onedark.nvim", -- Add your colorscheme plugin here
-	-- 	config = function()
-	-- 	end,
-	-- })
-
 	use({ "xiyaowong/nvim-cursorword" })
 	use("sam4llis/nvim-tundra") -- packer.nvim
 	use({ "gzagatti/vim-leuven-theme" })
@@ -273,4 +266,6 @@ return require("packer").startup(function(use)
 	use({ "tveskag/nvim-blame-line" })
 	use({ "kristijanhusak/vim-js-file-import", run = "npm install" })
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
+	use("ishan9299/modus-theme-vim")
+	use { "mangeshrex/everblush.vim" }
 end)

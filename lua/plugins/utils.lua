@@ -1,11 +1,11 @@
 -- Para nvim-web-devicons
 require("nvim-web-devicons").get_icons()
 require("colorizer").setup()
- require("Comment").setup({
- 	pre_hook = function()
- 		return require("ts_context_commentstring.internal").calculate_commentstring()
- 	end,
- })
+require("Comment").setup({
+	pre_hook = function()
+		return require("ts_context_commentstring.internal").calculate_commentstring()
+	end,
+})
 vim.opt.list = true
 
 --lua line confsg
@@ -271,7 +271,7 @@ require("gruvbox").setup({
 			bold = true,
 			reverse = false,
 			fg = "#442d30",
-			bg = "#442d30"
+			bg = "#442d30",
 		},
 		DiffText = { bold = true, reverse = false, fg = "", bg = "#213352" },
 		StatusLine = { bg = "#ffffff", fg = "#0E1018" },
@@ -288,7 +288,7 @@ require("gruvbox").setup({
 		WilderMenu = { fg = "#ebdbb2", bg = "#0E1018" },
 		WilderAccent = { fg = "#f4468f", bg = "#0E1018" },
 		highlight = { fg = "#0e1018", bg = "#fb4934" }, -- Optional
-	}
+	},
 })
 
 require("neoscroll").setup({
@@ -304,9 +304,11 @@ require("neoscroll").setup({
 	performance_mode = false, -- Disable "Performance Mode" on all buffers.
 })
 
-require('nvim-autopairs').setup({
+require("nvim-autopairs").setup({
 	disable_filetype = { "TelescopePrompt" },
 	map_cr = false,
 	disable_in_macro = false,
-	disable_in_visualblock = false
+	disable_in_visualblock = false,
 })
+
+
