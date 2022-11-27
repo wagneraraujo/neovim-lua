@@ -147,6 +147,8 @@ nnoremap <Leader>is <Plug>(SortJsFileImport)
 
 nnoremap <Leader>ic <Plug>(JsFixImport)
 
+hi hlgroup gui=underline
+
 ]])
 
 vim.opt.termguicolors = true

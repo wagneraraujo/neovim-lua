@@ -56,7 +56,7 @@ cmp.setup({
 			cmp.config.compare.offset,
 			cmp.config.compare.exact,
 			cmp.config.compare.score,
-			require "cmp-under-comparator".under,
+			require("cmp-under-comparator").under,
 			cmp.config.compare.kind,
 			cmp.config.compare.sort_text,
 			cmp.config.compare.length,
@@ -128,7 +128,8 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "tsserver" },
 		{ name = "path" },
-		{ name = "cmp_tabnine" },
+		{ name = "buffer-lines" },
+		{ name = "treesitter" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
@@ -139,8 +140,8 @@ cmp.setup({
 			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 		},
 	},
-	experimental = {
-		ghost_text = false,
-		native_menu = false,
-	},
+	-- experimental = {
+	-- 	ghost_text = false,
+	-- 	native_menu = false,
+	-- },
 })

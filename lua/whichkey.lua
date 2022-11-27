@@ -37,21 +37,3 @@ keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
-
-
-if ft == "java" then
-      keymap_c = {
-        name = "Code",
-        o = { "<cmd>lua require'jdtls'.organize_imports()<cr>", "Organize Imports" },
-        v = { "<cmd>lua require('jdtls').extract_variable()<cr>", "Extract Variable" },
-        c = { "<cmd>lua require('jdtls').extract_constant()<cr>", "Extract Constant" },
-        t = { "<cmd>lua require('jdtls').test_class()<cr>", "Test Class" },
-        n = { "<cmd>lua require('jdtls').test_nearest_method()<cr>", "Test Nearest Method" },
-      }
-      keymap_c_v = {
-        name = "Code",
-        v = { "<cmd>lua require('jdtls').extract_variable(true)<cr>", "Extract Variable" },
-        c = { "<cmd>lua require('jdtls').extract_constant(true)<cr>", "Extract Constant" },
-        m = { "<cmd>lua require('jdtls').extract_method(true)<cr>", "Extract Method" },
-      }
-    end

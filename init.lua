@@ -28,6 +28,7 @@ require("plugins.trouble")
 require("plugins.gitconflict")
 require("plugins.autopairs")
 require("plugins.indentline")
+-- require("plugins.comment")
 
 -- lsp config
 require("plugins.configs.lsp-config.configlsp")

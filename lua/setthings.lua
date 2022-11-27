@@ -1,10 +1,8 @@
-
 vim.cmd([[
 let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.ts,*.tsx,*.vue,*.svelte,*.jsp,*.php,*.erb'
 
 filetype plugin indent on
 syntax on
-
 
 set foldlevel=0
 set foldlevel=99
@@ -13,9 +11,7 @@ highlight link matchTag Search
 highlight link matchTag MatchParen
 highlight matchTag gui=reverse
 
-
 set re=0
-
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
@@ -31,7 +27,6 @@ let g:user_emmet_settings = {
         \      'extends' : 'tsx',
         \  },
         \}
-
 
 highlight Cursor guifg=white guibg=orange
 highlight iCursor guifg=white guibg=white
@@ -71,18 +66,7 @@ let g:cursorhold_updatetime = 100
 
 set statusline+=%{get(b:,'gitsigns_status','')}
 
-
-augroup javasupport
-	autocmd!
-	autocmd FileType java compiler javac
-	au Filetype java setlocal makeprg=javac\ %\ -g
-	au Filetype java setlocal errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
-	au FileType java noremap <buffer> <leader>c <Esc>:w<cr>:make<cr>:cwindow<cr>
-	au FileType java noremap <buffer> <leader>r :!clear;echo;echo %\|awk -F. '{print $1}'\|xargs java<cr>
-augroup end
-
 ]])
 
-
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true

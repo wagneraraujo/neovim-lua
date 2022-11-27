@@ -3,8 +3,36 @@ if not status_ok then
 	return
 end
 
-bufferline.setup {
+bufferline.setup({
 	options = {
+
+		custom_areas = {
+			right = function()
+				local result = {}
+				local seve = vim.diagnostic.severity
+				local error = #vim.diagnostic.get(0, { severity = seve.ERROR })
+				local warning = #vim.diagnostic.get(0, { severity = seve.WARN })
+				local info = #vim.diagnostic.get(0, { severity = seve.INFO })
+				local hint = #vim.diagnostic.get(0, { severity = seve.HINT })
+
+				if error ~= 0 then
+					table.insert(result, { text = "  " .. error, fg = "#EC5241" })
+				end
+
+				if warning ~= 0 then
+					table.insert(result, { text = "  " .. warning, fg = "#EFB839" })
+				end
+
+				if hint ~= 0 then
+					table.insert(result, { text = "  " .. hint, fg = "#A3BA5E" })
+				end
+
+				if info ~= 0 then
+					table.insert(result, { text = "  " .. info, fg = "#7EA9A7" })
+				end
+				return result
+			end,
+		},
 		-- numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
 		close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -35,63 +63,45 @@ bufferline.setup {
 		max_name_length = 30,
 		max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
 		tab_size = 21,
-		diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
-		diagnostics_update_in_insert = false,
-		-- diagnostics_indicator = function(count, level, diagnostics_dict, context)
-		--   return "("..count..")"
-		-- end,
+		diagnostics = "nvim_lsp", --| "cmp_nvim_lsp", -- | "coc",
+		diagnostics_update_in_insert = true,
 		-- NOTE: this will be called a lot so don't do any heavy processing here
-		-- custom_filter = function(buf_number)
-		--   -- filter out filetypes you don't want to see
-		--   if vim.bo[buf_number].filetype ~= "<i-dont-want-to-see-this>" then
-		--     return true
-		--   end
-		--   -- filter out by buffer name
-		--   if vim.fn.bufname(buf_number) ~= "<buffer-name-I-dont-want>" then
-		--     return true
-		--   end
-		--   -- filter out based on arbitrary rules
-		--   -- e.g. filter out vim wiki buffer from tabline in your work repo
-		--   if vim.fn.getcwd() == "<work-repo>" and vim.bo[buf_number].filetype ~= "wiki" then
-		--     return true
-		--   end
-		-- end,
-		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+		offsets = {
+			{
+				filetype = "NvimTree",
+				text = "",
+				padding = 0,
+
+				highlight = "Directory",
+				separator = true, -- use a "true" to enable the default, or set your own character
+			},
+		},
 		show_buffer_icons = true,
 		show_buffer_close_icons = false,
 		show_close_icon = false,
 		show_tab_indicators = true,
 		persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-		-- can also be a table containing 2 custom separators
-		-- [focused and unfocused]. eg: { '|', '|' }
-		separator_style = "thick", -- | "thick" | "thin" | { 'any', 'any' },
+		separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
 		enforce_regular_tabs = true,
-		always_show_bufferline = true,
-		-- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
-		--   -- add custom logic
-		--   return buffer_a.modified > buffer_b.modified
-		-- end
+		always_show_bufferline = false,
 	},
+
 	highlights = {
 		fill = {
 			fg = { attribute = "fg", highlight = "#ff0000" },
-			bg = { attribute = "bg", highlight = "TabLine" },
+			bg = {
+				attribute = "fg",
+				highlight = "#000000",
+			},
 		},
 		background = {
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "bg", highlight = "TabLine" },
 		},
-
-		-- buffer_selected = {
-		--   fg = {attribute='fg',highlight='#ff0000'},
-		--   bg = {attribute='bg',highlight='#0000ff'},
-		--   gui = 'none'
-		--   },
 		buffer_visible = {
 			fg = { attribute = "fg", highlight = "TabLine" },
-			bg = { attribute = "bg", highlight = "TabLine" },
+			bg = { attribute = "bg", highlight = "#EFB839" },
 		},
-
 		close_button = {
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "bg", highlight = "TabLine" },
@@ -100,14 +110,9 @@ bufferline.setup {
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "bg", highlight = "TabLine" },
 		},
-		-- close_button_selected = {
-		--   fg = {attribute='fg',highlight='TabLineSel'},
-		--   bg ={attribute='bg',highlight='TabLineSel'}
-		--   },
-
 		tab_selected = {
 			fg = { attribute = "fg", highlight = "Normal" },
-			bg = { attribute = "bg", highlight = "Normal" },
+			bg = { attribute = "bg", highlight = "#EFB839" },
 		},
 		tab = {
 			fg = { attribute = "fg", highlight = "TabLine" },
@@ -156,13 +161,9 @@ bufferline.setup {
 			fg = { attribute = "bg", highlight = "Normal" },
 			bg = { attribute = "bg", highlight = "Normal" },
 		},
-		-- separator_visible = {
-		--   fg = {attribute='bg',highlight='TabLine'},
-		--   bg = {attribute='bg',highlight='TabLine'}
-		--   },
 		indicator_selected = {
 			fg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
 			bg = { attribute = "bg", highlight = "Normal" },
 		},
 	},
-}
+})

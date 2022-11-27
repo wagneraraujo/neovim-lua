@@ -1,14 +1,11 @@
 -- Para nvim-web-devicons
 require("nvim-web-devicons").get_icons()
 require("colorizer").setup()
--- require('nvim_comment').setup()
-require("Comment").setup({
-	pre_hook = function()
-		return require("ts_context_commentstring.internal").calculate_commentstring()
-	end,
-})
-
---identacao
+ require("Comment").setup({
+ 	pre_hook = function()
+ 		return require("ts_context_commentstring.internal").calculate_commentstring()
+ 	end,
+ })
 vim.opt.list = true
 
 --lua line confsg
@@ -130,7 +127,6 @@ require("nvim-treesitter.configs").setup({
 		"tsx",
 		"javascript",
 		"html",
-		"comment",
 		"php",
 		"rust",
 		"markdown",
@@ -138,19 +134,20 @@ require("nvim-treesitter.configs").setup({
 		"vim",
 	},
 	sync_install = false,
-	context_commentstring = {
-		enable = true,
-		enable_autocmd = false,
-		config = {
-			javascript = {
-				__default = "// %s",
-				jsx_element = "{/* %s */}",
-				jsx_fragment = "{/* %s */}",
-				jsx_attribute = "// %s",
-				comment = "// %s",
-			},
-		},
-	},
+	-- context_commentstring = {
+	-- 	enable = true,
+	-- 	enable_autocmd = true,
+	-- 	config = {
+	-- 		javascript = {
+	-- 			__default = "// %s",
+	-- 			jsx_element = "{/* %s */}",
+	-- 			jsx_fragment = "{/* %s */}",
+	-- 			jsx_attribute = "// %s",
+	-- 			comment = "// %s",
+	-- 		},
+	-- 		typescript = { __default = '// %s', __multiline = '/* %s */' },
+	-- 	},
+	-- },
 	rainbow = {
 		enable = true,
 		disable = { "html" },
@@ -289,7 +286,8 @@ require("gruvbox").setup({
 		GruvboxRedSign = { fg = "#fb4934", bg = "#0E1018" },
 		GruvboxBlueSign = { fg = "#83a598", bg = "#0E1018" },
 		WilderMenu = { fg = "#ebdbb2", bg = "#0E1018" },
-		WilderAccent = { fg = "#f4468f", bg = "#0E1018" }
+		WilderAccent = { fg = "#f4468f", bg = "#0E1018" },
+		highlight = { fg = "#0e1018", bg = "#fb4934" }, -- Optional
 	}
 })
 
