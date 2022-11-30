@@ -1,6 +1,6 @@
 vim.cmd([[
 syntax on
-set shada="NONE"
+" set shada="NONE"
 set re=1
 set nohlsearch
 set encoding=utf-8
@@ -31,7 +31,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set cursorline
 set fileformats=unix,dos,mac
 if exists('$SHELL')
     set shell=$SHELL
@@ -76,7 +75,7 @@ au TermLeave * setlocal scrolloff=3
 
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins.lua source  | PackerCompile
   augroup end
 
 
@@ -107,13 +106,6 @@ endif
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 
-"if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-"  let g:coc_global_extensions += ['coc-prettier']
-"endif
-
-"if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-"  let g:coc_global_extensions += ['coc-eslint']
-"endif
 " Visual mode
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
@@ -127,8 +119,8 @@ au! BufRead,BufNewFile *.block set filetype=html
 
 
 " hi cursorline cterm=none term=none
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
+" autocmd WinEnter * setlocal cursorline
+" autocmd WinLeave * setlocal nocursorline
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
@@ -136,18 +128,11 @@ autocmd BufEnter * EnableBlameLine
 nnoremap <Leader>if <Plug>(JsFileImport)
 
 nnoremap <Leader>iF <Plug>(JsFileImportList)
-
-nnoremap <Leader>ig <Plug>(JsGotoDefinition)
-
-nnoremap <Leader>iG <Plug>(JsGotoDefinition)
-
 nnoremap <Leader>ip <Plug>(PromptJsFileImport)
-
 nnoremap <Leader>is <Plug>(SortJsFileImport)
-
 nnoremap <Leader>ic <Plug>(JsFixImport)
 
-hi hlgroup gui=underline
+" hi hlgroup gui=underline
 
 ]])
 
@@ -157,7 +142,7 @@ vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 5
 vim.opt.background = "dark"
 -- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme spacecamp_lite")
+vim.cmd("colorscheme darkplus")
 vim.api.nvim_create_user_command("FixWhitespace", [[%s/\s\+$//e]], {})
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- treesiter
 vim.opt.writebackup = false
@@ -178,3 +163,10 @@ vim.opt.wildmode = "list:longest,list:full" -- for : stuff
 vim.opt.wildignore:append({ ".javac", "node_modules", "*.pyc" })
 vim.opt.suffixesadd:append({ ".java", ".rs" }) -- search for suffexes using gf
 vim.opt.diffopt:append { "internal,algorithm:patience" }
+vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
+vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+vim.opt.conceallevel = 0
+vim.opt.pumheight = 10
+vim.opt.showtabline = 0
+vim.opt.sidescrolloff = 8 -- minimal number of screen columns to keep to the left and right of the cursor if wrap is `false`
+vim.opt.guifont = "monospace:h17"

@@ -264,4 +264,7 @@ return require("packer").startup(function(use)
 	use("ishan9299/modus-theme-vim")
 	use { "mangeshrex/everblush.vim" }
 	use { "jaredgorski/SpaceCamp" }
+	use { 'ldelossa/nvim-ide' }
+	use "lunarvim/darkplus.nvim"
+	use { "RRethy/vim-illuminate" }
 end)

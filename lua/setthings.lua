@@ -1,11 +1,11 @@
 vim.cmd([[
-let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.ts,*.tsx,*.vue,*.svelte,*.jsp,*.php,*.erb'
+" let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.ts,*.tsx,*.vue,*.svelte,*.jsp,*.php,*.erb'
 
 filetype plugin indent on
 syntax on
 
-set foldlevel=0
-set foldlevel=99
+" set foldlevel=0
+" set foldlevel=99
 
 highlight link matchTag Search
 highlight link matchTag MatchParen
@@ -37,7 +37,7 @@ set guicursor+=i:blinkwait10
 
 set tagfunc=jsfileimport#tagfunc
 set runtimepath^=~/.vim/bundle/bbye
-let g:vim_jsx_pretty_colorful_config = 1 " default 0
+let g:vim_jsx_pretty_colorful_config = 0 " default 0
 
 let g:loaded_matchit = 1
 

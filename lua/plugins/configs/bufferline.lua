@@ -70,7 +70,7 @@ bufferline.setup({
 			{
 				filetype = "NvimTree",
 				text = "",
-				padding = 0,
+				padding = 1,
 
 				highlight = "Directory",
 				separator = true, -- use a "true" to enable the default, or set your own character
