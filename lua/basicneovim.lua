@@ -157,7 +157,7 @@ vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 5
 vim.opt.background = "dark"
 -- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme everblush")
+vim.cmd("colorscheme spacecamp_lite")
 vim.api.nvim_create_user_command("FixWhitespace", [[%s/\s\+$//e]], {})
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- treesiter
 vim.opt.writebackup = false

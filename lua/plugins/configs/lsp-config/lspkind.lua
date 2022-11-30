@@ -55,7 +55,7 @@ local source_mapping = {
 
 require 'cmp'.setup {
 	sources = {
-		{ name = 'cmp_tabnine' },
+		{ name = 'nvim_lsp' },
 	},
 	formatting = {
 		format = function(entry, vim_item)
@@ -63,7 +63,7 @@ require 'cmp'.setup {
 			-- in the following line:
 			vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = "symbol" })
 			vim_item.menu = source_mapping[entry.source.name]
-			if entry.source.name == "cmp_tabnine" then
+			if entry.source.name == "nvim_lsp" then
 				local detail = (entry.completion_item.data or {}).detail
 				vim_item.kind = ""
 				if detail and detail:find('.*%%.*') then

@@ -187,9 +187,6 @@ return require("packer").startup(function(use)
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
 			require("trouble").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
 			})
 		end,
 	})
@@ -262,10 +259,9 @@ return require("packer").startup(function(use)
 	use({ "gzagatti/vim-leuven-theme" })
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 	use({ "ellisonleao/gruvbox.nvim" })
-	use("lukas-reineke/cmp-under-comparator")
 	use({ "tveskag/nvim-blame-line" })
 	use({ "kristijanhusak/vim-js-file-import", run = "npm install" })
-	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 	use("ishan9299/modus-theme-vim")
 	use { "mangeshrex/everblush.vim" }
+	use { "jaredgorski/SpaceCamp" }
 end)

@@ -128,26 +128,12 @@ require("nvim-treesitter.configs").setup({
 		"javascript",
 		"html",
 		"php",
-		"rust",
 		"markdown",
 		"json",
 		"vim",
+		"java"
 	},
-	sync_install = false,
-	-- context_commentstring = {
-	-- 	enable = true,
-	-- 	enable_autocmd = true,
-	-- 	config = {
-	-- 		javascript = {
-	-- 			__default = "// %s",
-	-- 			jsx_element = "{/* %s */}",
-	-- 			jsx_fragment = "{/* %s */}",
-	-- 			jsx_attribute = "// %s",
-	-- 			comment = "// %s",
-	-- 		},
-	-- 		typescript = { __default = '// %s', __multiline = '/* %s */' },
-	-- 	},
-	-- },
+	sync_install = true,
 	rainbow = {
 		enable = true,
 		disable = { "html" },
@@ -250,12 +236,6 @@ wilder.set_option(
 	}))
 )
 
--- require("nvim-treesitter.configs").setup({
--- 	autotag = {
--- 		enable = true,
--- 	},
--- })
-
 require("gruvbox").setup({
 	overrides = {
 		Define = { link = "GruvboxPurple" },
@@ -310,5 +290,3 @@ require("nvim-autopairs").setup({
 	disable_in_macro = false,
 	disable_in_visualblock = false,
 })
-
-
