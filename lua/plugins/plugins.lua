@@ -267,4 +267,7 @@ return require("packer").startup(function(use)
 	use { 'ldelossa/nvim-ide' }
 	use "lunarvim/darkplus.nvim"
 	use { "RRethy/vim-illuminate" }
+	use { 'wadackel/vim-dogrun' }
+	use "rafamadriz/neon"
+
 end)

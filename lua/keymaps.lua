@@ -1,4 +1,4 @@
-keymap = vim.keymap.set
+local keymap = vim.keymap.set
 
 vim.cmd([[
 nnoremap <C-s> :w<CR>

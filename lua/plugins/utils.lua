@@ -290,3 +290,4 @@ require("nvim-autopairs").setup({
 	disable_in_macro = false,
 	disable_in_visualblock = false,
 })
+
