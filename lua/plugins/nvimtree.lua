@@ -27,7 +27,7 @@ require 'nvim-tree'.setup {
 	},
 
 	view = {
-		width = 30,
+		width = 35,
 		side = 'right',
 		mappings = {
 			custom_only = false,
@@ -42,7 +42,7 @@ require 'nvim-tree'.setup {
 		update_cwd = true
 	},
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
 		custom = { "node_modules" }
 	},
 }
