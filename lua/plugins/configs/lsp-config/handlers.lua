@@ -9,6 +9,9 @@ M.capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
 M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
+JAVA_DAP_ACTIVE = true
+
+
 M.setup = function()
 	local signs = {
 
@@ -76,8 +79,22 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
+	if client.name == "tsserver" then
+		require("lsp-inlayhints").on_attach(client, bufnr)
+	end
+
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false
+	end
+	if client.name == "jdt.ls" then
+		client.server_capabilities.documentFormattingProvider = false
+	end
+	if client.name == "jdt.ls" then
+		vim.lsp.codelens.refresh()
+		if JAVA_DAP_ACTIVE then
+			require("jdtls").setup_dap { hotcodereplace = "auto" }
+			require("jdtls.dap").setup_dap_main_class_configs()
+		end
 	end
 
 	lsp_keymaps(bufnr)

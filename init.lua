@@ -9,6 +9,7 @@ _G.__luacache_config = {
 	},
 }
 
+require("autocomands")
 require("plugins.impatient")
 require("basicneovim")
 require("functions")
@@ -17,6 +18,7 @@ require("themes")
 require("keymaps")
 require("plugins.utils")
 require("plugins.nvimtree")
+require("plugins.project")
 require("setthings")
 -- require("plugins.complete")
 require("plugins.configs.bufferline")
@@ -37,3 +39,5 @@ require("plugins.configs.lsp-config.cmpconfiglua")
 require("plugins.configs.lsp-config.lspkind-config")
 require("plugins.configs.lsp-config.handlers")
 require("plugins.configs.lsp-config.mason")
+require("plugins.configs.lsp-config.java")
+require("plugins.configs.lsp-config.dap")

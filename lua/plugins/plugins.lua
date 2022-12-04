@@ -157,19 +157,7 @@ return require("packer").startup(function(use)
 	})
 	use({ "L3MON4D3/LuaSnip" })
 	use({ "rafamadriz/friendly-snippets" })
-
 	use("Valloric/MatchTagAlways")
-
-	--[[ use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
-	use("mfussenegger/nvim-dap")
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) ]]
-	-- use({
-	-- 	"projekt0n/github-nvim-theme",
-	-- 	config = function()
-	-- 		require("github-theme").setup({})
-	-- 	end,
-	-- })
-	-- Lua
 	use("ofirgall/ofirkai.nvim")
 	use({
 		"akinsho/toggleterm.nvim",
@@ -269,5 +257,13 @@ return require("packer").startup(function(use)
 	use { "RRethy/vim-illuminate" }
 	use { 'wadackel/vim-dogrun' }
 	use "rafamadriz/neon"
+
+	--java config
+	use { 'mfussenegger/nvim-jdtls' }
+	use { 'artur-shaik/jc.nvim' }
+	use { 'mfussenegger/nvim-dap' }
+	use { "rcarriga/nvim-dap-ui" }
+	use { "ravenxrz/DAPInstall.nvim" }
+	use { "ahmedkhalf/project.nvim" }
 
 end)
