@@ -56,6 +56,7 @@ local source_mapping = {
 require 'cmp'.setup {
 	sources = {
 		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' },
 	},
 	formatting = {
 		format = function(entry, vim_item)

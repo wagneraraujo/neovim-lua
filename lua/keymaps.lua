@@ -69,3 +69,4 @@ keymap("n", "<leader>di", "<Plug>(toggle-lsp-diag-update_in_insert)")
 keymap("n", "<Leader>b", "<cmd> Bracey <cr>")
 keymap("n", "<Leader>bb", "<cmd> BraceyStop <cr>")
 keymap("n", "<Leader>bbb", "<cmd> BraceyReload <cr>")
+vim.cmd "nnoremap <leader>fc <CMD>Telescope command_center<CR>"
