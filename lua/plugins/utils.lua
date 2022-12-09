@@ -120,23 +120,29 @@ require("nvim-cursorline").setup({
 -- include treesitter and its config
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
-		"lua",
-		"typescript",
-		"regex",
+		"bash",
 		"css",
-		"tsx",
-		"javascript",
+		"graphql",
 		"html",
-		"php",
-		"markdown",
+		"javascript",
 		"json",
+		"lua",
+		"markdown",
+		"markdown_inline",
+		"php",
+		"regex",
+		"rust",
+		"scss",
+		"sql",
+		"toml",
+		"tsx",
+		"typescript",
 		"vim",
-		"java"
+		"yaml",
 	},
 	sync_install = true,
 	rainbow = {
 		enable = true,
-		disable = { "html" },
 		extended_mode = false,
 		max_file_lines = nil,
 	},
@@ -147,7 +153,16 @@ require("nvim-treesitter.configs").setup({
 		enable = true,
 	},
 	indent = { enable = true, disable = { "python" } },
-
+	filetypes = {
+		"html",
+		"javascript",
+		"javascriptreact",
+		"svelte",
+		"typescript",
+		"typescriptreact",
+		"vue",
+		"xml",
+	},
 	refactor = {
 		smart_rename = {
 			enable = true,

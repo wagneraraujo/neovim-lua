@@ -263,7 +263,12 @@ return require("packer").startup(function(use)
 	use { 'mfussenegger/nvim-dap' }
 	use { "rcarriga/nvim-dap-ui" }
 	use { "ravenxrz/DAPInstall.nvim" }
-	use { "ahmedkhalf/project.nvim" }
+	-- use { "ahmedkhalf/project.nvim" }
 
 	use 'Mofiqul/adwaita.nvim'
+	use {
+		'ramojus/meliora.nvim',
+		requires = { 'rktjmp/lush.nvim' }
+	}
+	use { 'styled-components/vim-styled-components' }
 end)

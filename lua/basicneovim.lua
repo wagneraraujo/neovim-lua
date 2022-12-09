@@ -31,6 +31,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set omnifunc
 set fileformats=unix,dos,mac
 if exists('$SHELL')
     set shell=$SHELL
@@ -67,6 +68,9 @@ if has("gui_running")
 else
   let g:CSApprox_loaded = 1
 endif
+
+set cursorline
+:highlight Cursorline cterm=bold ctermbg=black
 
 
 au TermEnter * setlocal scrolloff=0
@@ -134,6 +138,7 @@ nnoremap <Leader>ic <Plug>(JsFixImport)
 
 " hi hlgroup gui=underline
 
+
 ]])
 
 vim.opt.termguicolors = true
@@ -164,9 +169,14 @@ vim.opt.wildignore:append({ ".javac", "node_modules", "*.pyc" })
 vim.opt.suffixesadd:append({ ".java", ".rs" }) -- search for suffexes using gf
 vim.opt.diffopt:append { "internal,algorithm:patience" }
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
-vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+vim.opt.completeopt = "noinsert,menuone,noselect"
 vim.opt.conceallevel = 0
 vim.opt.pumheight = 10
 vim.opt.showtabline = 0
 vim.opt.sidescrolloff = 8 -- minimal number of screen columns to keep to the left and right of the cursor if wrap is `false`
 vim.opt.guifont = "monospace:h17"
+vim.opt.ttimeoutlen = 0
+vim.opt.updatetime = 250
+vim.opt.wildmenu = true
+vim.opt.wrap = true
+vim.opt.foldmethod = "manual"

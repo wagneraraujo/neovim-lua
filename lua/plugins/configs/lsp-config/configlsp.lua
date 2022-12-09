@@ -1,4 +1,6 @@
 --vim.lsp.set_log_level("debug")
+local lspconfig = require("lspconfig")
+local caps = vim.lsp.protocol.make_client_capabilities()
 
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
@@ -23,8 +25,9 @@ local on_attach = function(client, bufnr)
 	local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
 	--Enable completion triggered by <c-x><c-o>
-	--local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-	--buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+	local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+	buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 	-- Mappings.
 	local opts = { noremap = true, silent = true }
@@ -74,7 +77,7 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
 	on_attach = on_attach,
-	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript" },
+	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascript.jsx" },
 	cmd = { "typescript-language-server", "--stdio" },
 	capabilities = capabilities
 }
@@ -83,7 +86,19 @@ nvim_lsp.sourcekit.setup {
 	on_attach = on_attach,
 	capabilities = capabilities,
 }
-
+-- Emmet
+lspconfig.emmet_ls.setup({
+	capabilities = capabilities,
+	filetypes = {
+		"css",
+		"html",
+		"javascriptreact",
+		"less",
+		"sass",
+		"scss",
+		"typescriptreact",
+	},
+})
 nvim_lsp.sumneko_lua.setup {
 	capabilities = capabilities,
 	on_attach = function(client, bufnr)
@@ -146,3 +161,15 @@ vim.diagnostic.config({
 		source = "always", -- Or "if_many"
 	},
 })
+
+-- LSP config
+-- local lspconfig = require('lspconfig')
+-- local servers = { 'bashls', 'sumneko_lua', 'solargraph', 'tsserver', 'vimls' }
+-- for _, lsp in ipairs(servers) do
+--   lspconfig[lsp].setup({
+--     on_attach = function(_, bufnr)
+--       vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+--       vim.api.nvim_buf_set_option(bufnr, 'tagfunc', 'v:lua.vim.lsp.tagfunc')
+--     end
+--   })
+-- end

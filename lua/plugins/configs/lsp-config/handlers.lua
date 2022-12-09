@@ -79,9 +79,6 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
-	if client.name == "tsserver" then
-		require("lsp-inlayhints").on_attach(client, bufnr)
-	end
 
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false

@@ -144,3 +144,12 @@ cmp.setup({
 	-- 	native_menu = false,
 	-- },
 })
+
+-- File types specifics
+cmp.setup.filetype("gitcommit", {
+	sources = cmp.config.sources({
+		{ name = "cmp_git" },
+	}, {
+		{ name = "buffer" },
+	}),
+})

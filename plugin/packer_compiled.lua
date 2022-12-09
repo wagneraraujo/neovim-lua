@@ -242,6 +242,11 @@ _G.packer_plugins = {
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["marks.nvim"] = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/marks.nvim",
@@ -256,6 +261,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["meliora.nvim"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/meliora.nvim",
+    url = "https://github.com/ramojus/meliora.nvim"
   },
   ["modus-theme-vim"] = {
     loaded = true,
@@ -404,11 +414,6 @@ _G.packer_plugins = {
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/presence.nvim",
     url = "https://github.com/andweeb/presence.nvim"
   },
-  ["project.nvim"] = {
-    loaded = true,
-    path = "/home/dev/.local/share/nvim/site/pack/packer/start/project.nvim",
-    url = "https://github.com/ahmedkhalf/project.nvim"
-  },
   ["surround.nvim"] = {
     config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0" },
     loaded = true,
@@ -416,7 +421,7 @@ _G.packer_plugins = {
     url = "https://github.com/ur4ltz/surround.nvim"
   },
   ["tabout.nvim"] = {
-    config = { "\27LJ\2\n表3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\nclose\6}\topen\6{\1\0\2\nclose\6]\topen\6[\1\0\2\nclose\6)\topen\6(\1\0\2\nclose\6`\topen\6`\1\0\2\nclose\6\"\topen\6\"\1\0\2\nclose\6'\topen\6'\1\0\t\22default_shift_tab\n<C-d>\21ignore_beginning\2\16default_tab\n<C-t>\21act_as_shift_tab\1\15act_as_tab\2\21backwards_tabkey\f<S-Tab>\21enable_backwards\2\vtabkey\n<Tab>\15completion\2\nsetup\vtabout\frequire\0" },
+    config = { "\27LJ\2\n表3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\nclose\6}\topen\6{\1\0\2\nclose\6]\topen\6[\1\0\2\nclose\6)\topen\6(\1\0\2\nclose\6`\topen\6`\1\0\2\nclose\6\"\topen\6\"\1\0\2\nclose\6'\topen\6'\1\0\t\22default_shift_tab\n<C-d>\21enable_backwards\2\15completion\2\vtabkey\n<Tab>\21backwards_tabkey\f<S-Tab>\15act_as_tab\2\21act_as_shift_tab\1\16default_tab\n<C-t>\21ignore_beginning\2\nsetup\vtabout\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -516,6 +521,11 @@ _G.packer_plugins = {
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/vim-matchtag",
     url = "https://github.com/leafOfTree/vim-matchtag"
   },
+  ["vim-styled-components"] = {
+    loaded = true,
+    path = "/home/dev/.local/share/nvim/site/pack/packer/start/vim-styled-components",
+    url = "https://github.com/styled-components/vim-styled-components"
+  },
   ["vim-visual-multi"] = {
     loaded = true,
     path = "/home/dev/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
@@ -534,26 +544,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
--- Config for: navigator.lua
-time([[Config for navigator.lua]], true)
-try_loadstring("\27LJ\2\nﾛ\1\0\0\6\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\a\0005\4\5\0005\5\4\0=\5\6\4=\4\b\3=\3\t\2B\0\2\1K\0\1\0\blsp\rtsserver\1\0\0\bcmd\1\0\0\1\2\0\0g~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver\1\0\1\nmason\2\nsetup\14navigator\frequire\0", "config", "navigator.lua")
-time([[Config for navigator.lua]], false)
--- Config for: better-escape.nvim
-time([[Config for better-escape.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
-time([[Config for better-escape.nvim]], false)
--- Config for: surround.nvim
-time([[Config for surround.nvim]], true)
-try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0", "config", "surround.nvim")
-time([[Config for surround.nvim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
@@ -566,13 +556,33 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for git-conflict.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
 time([[Config for git-conflict.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
+-- Config for: better-escape.nvim
+time([[Config for better-escape.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
+time([[Config for better-escape.nvim]], false)
+-- Config for: surround.nvim
+time([[Config for surround.nvim]], true)
+try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0", "config", "surround.nvim")
+time([[Config for surround.nvim]], false)
+-- Config for: navigator.lua
+time([[Config for navigator.lua]], true)
+try_loadstring("\27LJ\2\nﾛ\1\0\0\6\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\a\0005\4\5\0005\5\4\0=\5\6\4=\4\b\3=\3\t\2B\0\2\1K\0\1\0\blsp\rtsserver\1\0\0\bcmd\1\0\0\1\2\0\0g~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/bin/tsserver\1\0\1\nmason\2\nsetup\14navigator\frequire\0", "config", "navigator.lua")
+time([[Config for navigator.lua]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]
 vim.cmd [[ packadd tabout.nvim ]]
 
 -- Config for: tabout.nvim
-try_loadstring("\27LJ\2\n表3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\nclose\6}\topen\6{\1\0\2\nclose\6]\topen\6[\1\0\2\nclose\6)\topen\6(\1\0\2\nclose\6`\topen\6`\1\0\2\nclose\6\"\topen\6\"\1\0\2\nclose\6'\topen\6'\1\0\t\22default_shift_tab\n<C-d>\21ignore_beginning\2\16default_tab\n<C-t>\21act_as_shift_tab\1\15act_as_tab\2\21backwards_tabkey\f<S-Tab>\21enable_backwards\2\vtabkey\n<Tab>\15completion\2\nsetup\vtabout\frequire\0", "config", "tabout.nvim")
+try_loadstring("\27LJ\2\n表3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\nclose\6}\topen\6{\1\0\2\nclose\6]\topen\6[\1\0\2\nclose\6)\topen\6(\1\0\2\nclose\6`\topen\6`\1\0\2\nclose\6\"\topen\6\"\1\0\2\nclose\6'\topen\6'\1\0\t\22default_shift_tab\n<C-d>\21enable_backwards\2\15completion\2\vtabkey\n<Tab>\21backwards_tabkey\f<S-Tab>\15act_as_tab\2\21act_as_shift_tab\1\16default_tab\n<C-t>\21ignore_beginning\2\nsetup\vtabout\frequire\0", "config", "tabout.nvim")
 
 time([[Sequenced loading]], false)
 
