@@ -137,6 +137,7 @@ nnoremap <Leader>is <Plug>(SortJsFileImport)
 nnoremap <Leader>ic <Plug>(JsFixImport)
 
 " hi hlgroup gui=underline
+nnoremap geh <cmd>Telescope find_files hidden=true<cr>
 
 
 ]])

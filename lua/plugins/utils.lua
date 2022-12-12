@@ -133,7 +133,6 @@ require("nvim-treesitter.configs").setup({
 		"regex",
 		"rust",
 		"scss",
-		"sql",
 		"toml",
 		"tsx",
 		"typescript",
