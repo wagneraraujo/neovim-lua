@@ -271,7 +271,56 @@ return require("packer").startup(function(use)
 		requires = { 'rktjmp/lush.nvim' }
 	}
 	use { 'liuchengxu/space-vim-dark' }
+	use { 'jsit/toast.vim' }
+	--
+	-- :TSInstall regex typescript
+	use { 'bennypowers/nvim-regexplainer',
+		config = function() require 'regexplainer'.setup() end,
+		requires = {
+			'nvim-treesitter/nvim-treesitter',
+			'MunifTanjim/nui.nvim',
+		} }
 	use { 'styled-components/vim-styled-components' }
 	use { 'nvim-telescope/telescope-fzf-native.nvim',
+
 		run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+
+
+	use {
+  "utilyre/barbecue.nvim",
+  requires = {
+    "neovim/nvim-lspconfig",
+    "smiteshp/nvim-navic",
+    "kyazdani42/nvim-web-devicons", -- optional
+  },
+  after = "nvim-web-devicons", -- NOTICE: keep this if you're using NvChad
+  config = function()
+    require("barbecue").setup()
+  end,
+}
+
+	-- Lua
+use({
+  "gbprod/cutlass.nvim",
+  config = function()
+    require("cutlass").setup({
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    })
+  end
+})
+
+	use {
+  'NFrid/due.nvim',
+  config = function()
+    require('due_nvim').setup {}
+  end
+}
+	use {
+  "aznhe21/actions-preview.nvim",
+  config = function()
+    vim.keymap.set({ "v", "n" }, "gf", require("actions-preview").code_actions)
+  end,
+}
 end)
