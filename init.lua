@@ -12,6 +12,7 @@ _G.__luacache_config = {
 require("autocomands")
 require("plugins.impatient")
 require("basicneovim")
+require("trimwhite")
 require("functions")
 require("plugins.plugins")
 require("themes")

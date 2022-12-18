@@ -270,6 +270,8 @@ return require("packer").startup(function(use)
 		'ramojus/meliora.nvim',
 		requires = { 'rktjmp/lush.nvim' }
 	}
+	use { 'liuchengxu/space-vim-dark' }
 	use { 'styled-components/vim-styled-components' }
-	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+	use { 'nvim-telescope/telescope-fzf-native.nvim',
+		run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 end)
